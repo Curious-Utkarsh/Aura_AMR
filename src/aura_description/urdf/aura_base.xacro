@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<robot name="aura" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="base_footprint" />
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="2.6242213294725585e-17 -2.256459952565477e-17 0.016499999999999983" rpy="0 0 0"/>
+      <mass value="1.743512867727987"/>
+      <inertia ixx="0.009262" iyy="0.011957" izz="0.021216" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+
+
+  <link name="wall">
+    <inertial>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <mass value="2.7033358833743404"/>
+      <inertia ixx="0.033022" iyy="0.047623" izz="0.078083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/wall.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="mud_yellow"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/wall.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_wall" type="fixed">
+    <origin xyz="0.0 0.0 0.033" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wall"/>
+  </joint>
+
+
+
+  <link name="back_castor">
+    <inertial>
+      <origin xyz="0.12 0.0 -0.015" rpy="0 0 0"/>
+      <mass value="0.030997748883593468"/>
+      <inertia ixx="3e-06" iyy="3e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.12 0.0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/back_castor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.12 0.0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/back_castor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_back_castor" type="fixed">
+    <origin xyz="-0.12 0.0 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="back_castor"/>
+  </joint>
+
+
+
+  <link name="front_castor">
+    <inertial>
+      <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/>
+      <mass value="0.030997748883593468"/>
+      <inertia ixx="3e-06" iyy="3e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+     <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/front_castor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/front_castor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_front_castor" type="fixed">
+    <origin xyz="0.12 0.0 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="front_castor"/>
+  </joint>
+
+
+
+  <link name="right_wheel">
+    <inertial>
+      <origin xyz="-4.135866654458078e-07 -0.022655023372287864 -6.624769580132472e-08" rpy="0 0 0"/>
+      <mass value="0.2385962385065163"/>
+      <inertia ixx="0.000155" iyy="0.000225" izz="0.000155" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="8.9e-05 0.128 -0.043091" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cream"/>
+    </visual>
+    <collision>
+      <origin xyz="8.9e-05 0.128 -0.043091" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_right_wheel" type="continuous">
+    <origin xyz="-8.9e-05 -0.128 0.010091" rpy="0 0 0"/>
+    <parent link="wall"/>
+    <child link="right_wheel"/>
+    <axis xyz="-0.0 -1.0 0.0"/>
+  </joint>
+
+
+
+  <link name="left_wheel">
+    <inertial>
+      <origin xyz="-4.135866654364159e-07 0.022655023372287864 -6.62476958360192e-08" rpy="0 0 0"/>
+      <mass value="2.2063738184473554"/>
+      <inertia ixx="0.00143" iyy="0.002082" izz="0.00143" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="8.9e-05 -0.128 -0.043091" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cream"/>
+    </visual>
+    <collision>
+      <origin xyz="8.9e-05 -0.128 -0.043091" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_left_wheel" type="continuous">
+    <origin xyz="-8.9e-05 0.128 0.010091" rpy="0 0 0"/>
+    <parent link="wall"/>
+    <child link="left_wheel"/>
+    <axis xyz="0.0 -1.0 -0.0"/>
+  </joint>
+
+
+
+  <link name="imu">
+    <inertial>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <mass value="0.011338921279200002"/>
+      <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/imu.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="purple"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/imu.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_imu" type="fixed">
+    <origin xyz="0.0 0.0 0.033" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu"/>
+  </joint>
+
+
+
+  <link name="top_plate">
+    <inertial>
+      <origin xyz="0.0 0.0 -0.1" rpy="0 0 0"/>
+      <mass value="2.036265014260499"/>
+      <inertia ixx="0.005548" iyy="0.007098" izz="0.01187" ixy="0.0" iyz="-0.0" ixz="-0.000137"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 -0.1" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/top_plate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="matte_brown"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.1" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/top_plate.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_top_plate" type="fixed">
+    <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="top_plate"/>
+  </joint>
+
+
+
+
+  <link name="camera">
+    <inertial>
+     <origin xyz="-0.15 0.0 -0.118" rpy="0 0 0"/>
+      <mass value="0.29820209775649525"/>
+      <inertia ixx="0.000242" iyy="2.3e-05" izz="0.000242" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.15 0.0 -0.118" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.15 0.0 -0.118" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_camera" type="fixed">
+    <origin xyz="0.15 0.0 0.118" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera"/>
+  </joint>
+
+
+
+  <link name="lidar">
+    <inertial>
+      <origin xyz="0.0 0.0 -0.16" rpy="0 0 0"/>
+      <mass value="0.5574542584878225"/>
+      <inertia ixx="0.000238" iyy="0.000472" izz="0.000552" ixy="-5e-06" iyz="-2e-06" ixz="-4.7e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 -0.16" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.16" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://aura_description/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_lidar" type="fixed">
+    <origin xyz="0.0 0.0 0.16" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="lidar"/>
+  </joint>
+
+</robot>

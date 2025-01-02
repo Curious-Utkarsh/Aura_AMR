@@ -1,0 +1,1 @@
+/home/utk/aura_ws/build/aura_description/ament_cmake_core/aura_descriptionConfig-version.cmake
