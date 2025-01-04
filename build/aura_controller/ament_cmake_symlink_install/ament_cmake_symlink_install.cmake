@@ -310,8 +310,23 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install(FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/aura_controller/environment")
+ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_controller" FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/aura_controller/environment")
+
+# install(FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/aura_controller/environment")
+ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_controller" FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/aura_controller/environment")
+
+# install(DIRECTORY "/home/utk/aura_ws/build/aura_controller/ament_cmake_python/aura_controller/aura_controller.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_controller-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_controller" DIRECTORY "/home/utk/aura_ws/build/aura_controller/ament_cmake_python/aura_controller/aura_controller.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_controller-0.0.0-py3.10.egg-info")
+
+# install(DIRECTORY "/home/utk/aura_ws/src/aura_controller/aura_controller/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_controller" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_controller" DIRECTORY "/home/utk/aura_ws/src/aura_controller/aura_controller/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_controller" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+
 # install(DIRECTORY "launch" "config" "DESTINATION" "share/aura_controller")
 ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_controller" DIRECTORY "launch" "config" "DESTINATION" "share/aura_controller")
+
+# install(PROGRAMS "aura_controller/twist_relay_node.py" "DESTINATION" "lib/aura_controller")
+ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_controller" PROGRAMS "aura_controller/twist_relay_node.py" "DESTINATION" "lib/aura_controller")
 
 # install(FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_controller" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_controller" FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_controller" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

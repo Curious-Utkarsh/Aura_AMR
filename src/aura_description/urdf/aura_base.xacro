@@ -148,9 +148,8 @@
     <origin xyz="-8.9e-05 -0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="right_wheel"/>
-    <axis xyz="-0.0 -1.0 0.0"/>
+    <axis xyz="-0.0 1.0 0.0"/>
   </joint>
-
 
 
   <link name="left_wheel">
@@ -178,7 +177,7 @@
     <origin xyz="-8.9e-05 0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="left_wheel"/>
-    <axis xyz="0.0 -1.0 -0.0"/>
+    <axis xyz="0.0 1.0 -0.0"/>
   </joint>
 
 

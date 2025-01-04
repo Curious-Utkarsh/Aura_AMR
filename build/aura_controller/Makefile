@@ -197,6 +197,32 @@ aura_controller_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aura_controller_uninstall.dir/build.make CMakeFiles/aura_controller_uninstall.dir/build
 .PHONY : aura_controller_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_aura_controller
+
+# Build rule for target.
+ament_cmake_python_symlink_aura_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_aura_controller
+.PHONY : ament_cmake_python_symlink_aura_controller
+
+# fast build rule for target.
+ament_cmake_python_symlink_aura_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_controller.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_controller.dir/build
+.PHONY : ament_cmake_python_symlink_aura_controller/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_build_aura_controller_egg
+
+# Build rule for target.
+ament_cmake_python_build_aura_controller_egg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_build_aura_controller_egg
+.PHONY : ament_cmake_python_build_aura_controller_egg
+
+# fast build rule for target.
+ament_cmake_python_build_aura_controller_egg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_controller_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_controller_egg.dir/build
+.PHONY : ament_cmake_python_build_aura_controller_egg/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +236,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ament_cmake_python_build_aura_controller_egg"
+	@echo "... ament_cmake_python_symlink_aura_controller"
 	@echo "... aura_controller_uninstall"
 	@echo "... uninstall"
 .PHONY : help
