@@ -1,4 +1,5 @@
 /home/utk/aura_ws/install/aura_description/share/aura_description/launch/display.launch.py
+/home/utk/aura_ws/install/aura_description/share/aura_description/launch/gazebo.launch.py
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/back_castor.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/base_link.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/camera.stl
@@ -12,7 +13,9 @@
 /home/utk/aura_ws/install/aura_description/share/aura_description/rviz/display.rviz
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura.urdf.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_base.xacro
+/home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_gazebo.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_materials.xacro
+/home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_ros2control.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/models/aws_robomaker_residential_AirconditionerA_01/materials/textures/aws_AirconditionerA_01.png
 /home/utk/aura_ws/install/aura_description/share/aura_description/models/aws_robomaker_residential_AirconditionerA_01/meshes/aws_AirconditionerA_01_collision.DAE
 /home/utk/aura_ws/install/aura_description/share/aura_description/models/aws_robomaker_residential_AirconditionerA_01/meshes/aws_AirconditionerA_01_visual.DAE

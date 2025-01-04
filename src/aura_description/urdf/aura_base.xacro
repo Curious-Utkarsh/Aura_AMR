@@ -1,6 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="aura" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <!-- Start GZ or Ignition depending on ROS 2 Version -->
+  <xacro:arg name="is_ignition" default="true"/>
+
+  <!-- Load Simulated or Real Hardware Interfaces -->
+  <xacro:arg name="is_sim" default="true"/>
+
   <link name="base_footprint" />
 
   <link name="base_link">
@@ -14,7 +20,7 @@
       <geometry>
         <mesh filename="package://aura_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="matte_brown"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -53,7 +59,7 @@
     </collision>
   </link>
 
-  <joint name="base_wall" type="fixed">
+  <joint name="base_wall_joint" type="fixed">
     <origin xyz="0.0 0.0 0.033" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="wall"/>
@@ -82,12 +88,11 @@
     </collision>
   </link>
 
-  <joint name="base_back_castor" type="fixed">
+  <joint name="base_back_castor_joint" type="fixed">
     <origin xyz="-0.12 0.0 0.015" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="back_castor"/>
   </joint>
-
 
 
   <link name="front_castor">
@@ -111,7 +116,7 @@
     </collision>
   </link>
 
-  <joint name="base_front_castor" type="fixed">
+  <joint name="base_front_castor_joint" type="fixed">
     <origin xyz="0.12 0.0 0.015" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="front_castor"/>
@@ -140,7 +145,7 @@
     </collision>
   </link>
 
-  <joint name="wall_right_wheel" type="continuous">
+  <joint name="wall_right_wheel_joint" type="continuous">
     <origin xyz="-8.9e-05 -0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="right_wheel"/>
@@ -170,7 +175,7 @@
     </collision>
   </link>
 
-  <joint name="wall_left_wheel" type="continuous">
+  <joint name="wall_left_wheel_joint" type="continuous">
     <origin xyz="-8.9e-05 0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="left_wheel"/>
@@ -179,7 +184,7 @@
 
 
 
-  <link name="imu">
+  <link name="imu_link">
     <inertial>
       <origin xyz="0.0 0.0 -0.033" rpy="0 0 0"/>
       <mass value="0.011338921279200002"/>
@@ -200,10 +205,10 @@
     </collision>
   </link>
 
-  <joint name="base_imu" type="fixed">
+  <joint name="base_imu_joint" type="fixed">
     <origin xyz="0.0 0.0 0.033" rpy="0 0 0"/>
     <parent link="base_link"/>
-    <child link="imu"/>
+    <child link="imu_link"/>
   </joint>
 
 
@@ -229,16 +234,14 @@
     </collision>
   </link>
 
-  <joint name="base_top_plate" type="fixed">
+  <joint name="base_top_plate_joint" type="fixed">
     <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="top_plate"/>
   </joint>
 
 
-
-
-  <link name="camera">
+  <link name="camera_link">
     <inertial>
      <origin xyz="-0.15 0.0 -0.118" rpy="0 0 0"/>
       <mass value="0.29820209775649525"/>
@@ -259,15 +262,23 @@
     </collision>
   </link>
 
-  <joint name="base_link_camera" type="fixed">
+  <joint name="base_camera_joint" type="fixed">
     <origin xyz="0.15 0.0 0.118" rpy="0 0 0"/>
     <parent link="base_link"/>
-    <child link="camera"/>
+    <child link="camera_link"/>
   </joint>
 
+    <link name="camera_link_optical" />
+
+    <joint name="camera_optical_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_link_optical"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    </joint>
 
 
-  <link name="lidar">
+
+  <link name="lidar_link">
     <inertial>
       <origin xyz="0.0 0.0 -0.16" rpy="0 0 0"/>
       <mass value="0.5574542584878225"/>
@@ -288,10 +299,10 @@
     </collision>
   </link>
 
-  <joint name="base_lidar" type="fixed">
+  <joint name="base_lidar_joint" type="fixed">
     <origin xyz="0.0 0.0 0.16" rpy="0 0 0"/>
     <parent link="base_link"/>
-    <child link="lidar"/>
+    <child link="lidar_link"/>
   </joint>
 
 </robot>
