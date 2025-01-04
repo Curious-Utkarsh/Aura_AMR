@@ -1,0 +1,1 @@
+/home/utk/aura_ws/build/aura_controller/ament_cmake_core/aura_controllerConfig-version.cmake

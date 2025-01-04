@@ -1,10 +1,8 @@
 <?xml version="1.0" ?>
 <robot name="aura" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Start GZ or Ignition depending on ROS 2 Version -->
-  <xacro:arg name="is_ignition" default="true"/>
 
-  <!-- Load Simulated or Real Hardware Interfaces -->
+  <xacro:arg name="is_ignition" default="true"/>
   <xacro:arg name="is_sim" default="true"/>
 
   <link name="base_footprint" />
@@ -81,15 +79,15 @@
       <material name="silver"/>
     </visual>
     <collision>
-      <origin xyz="0.12 0.0 -0.015" rpy="0 0 0"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://aura_description/meshes/back_castor.stl" scale="0.001 0.001 0.001"/>
+        <sphere radius="0.015"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="base_back_castor_joint" type="fixed">
-    <origin xyz="-0.12 0.0 0.015" rpy="0 0 0"/>
+  <joint name="back_castor_joint" type="fixed">
+    <origin xyz="-0.12 0.0 0.0151" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="back_castor"/>
   </joint>
@@ -97,7 +95,7 @@
 
   <link name="front_castor">
     <inertial>
-      <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/>
+      <origin xyz="-0.12 0.0 -0.15" rpy="0 0 0"/>
       <mass value="0.030997748883593468"/>
       <inertia ixx="3e-06" iyy="3e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
     </inertial>
@@ -109,15 +107,16 @@
       <material name="silver"/>
     </visual>
     <collision>
-      <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/>
+     <!-- <origin xyz="-0.12 0.0 -0.015" rpy="0 0 0"/> -->
+     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://aura_description/meshes/front_castor.stl" scale="0.001 0.001 0.001"/>
+        <sphere radius="0.015"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="base_front_castor_joint" type="fixed">
-    <origin xyz="0.12 0.0 0.015" rpy="0 0 0"/>
+  <joint name="front_castor_joint" type="fixed">
+    <origin xyz="0.12 0.0 0.0151" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="front_castor"/>
   </joint>
@@ -127,8 +126,8 @@
   <link name="right_wheel">
     <inertial>
       <origin xyz="-4.135866654458078e-07 -0.022655023372287864 -6.624769580132472e-08" rpy="0 0 0"/>
-      <mass value="0.2385962385065163"/>
-      <inertia ixx="0.000155" iyy="0.000225" izz="0.000155" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+      <mass value="2.2063738184473554"/>
+      <inertia ixx="0.00143" iyy="0.002082" izz="0.00143" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
     </inertial>
     <visual>
       <origin xyz="8.9e-05 0.128 -0.043091" rpy="0 0 0"/>
@@ -145,7 +144,7 @@
     </collision>
   </link>
 
-  <joint name="wall_right_wheel_joint" type="continuous">
+  <joint name="right_wheel_joint" type="continuous">
     <origin xyz="-8.9e-05 -0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="right_wheel"/>
@@ -156,7 +155,7 @@
 
   <link name="left_wheel">
     <inertial>
-      <origin xyz="-4.135866654364159e-07 0.022655023372287864 -6.62476958360192e-08" rpy="0 0 0"/>
+      <origin xyz="-4.135866654458078e-07 0.022655023372287864 -6.624769580132472e-08" rpy="0 0 0"/>
       <mass value="2.2063738184473554"/>
       <inertia ixx="0.00143" iyy="0.002082" izz="0.00143" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
     </inertial>
@@ -175,7 +174,7 @@
     </collision>
   </link>
 
-  <joint name="wall_left_wheel_joint" type="continuous">
+  <joint name="left_wheel_joint" type="continuous">
     <origin xyz="-8.9e-05 0.128 0.010091" rpy="0 0 0"/>
     <parent link="wall"/>
     <child link="left_wheel"/>

@@ -1,0 +1,17 @@
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/launch/controller.launch.py
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/config/aura_controllers.yaml
+/home/utk/aura_ws/install/aura_controller/share/ament_index/resource_index/package_run_dependencies/aura_controller
+/home/utk/aura_ws/install/aura_controller/share/ament_index/resource_index/parent_prefix_path/aura_controller
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/environment/ament_prefix_path.sh
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/environment/ament_prefix_path.dsv
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/environment/path.sh
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/environment/path.dsv
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/local_setup.bash
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/local_setup.sh
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/local_setup.zsh
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/local_setup.dsv
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.dsv
+/home/utk/aura_ws/install/aura_controller/share/ament_index/resource_index/packages/aura_controller
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/cmake/aura_controllerConfig.cmake
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/cmake/aura_controllerConfig-version.cmake
+/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.xml
