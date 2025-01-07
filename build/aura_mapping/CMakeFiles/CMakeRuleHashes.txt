@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+facd93785d339af946db773cbe267692 CMakeFiles/ament_cmake_python_build_aura_mapping_egg
+36105dfa7e95402d86f3b2f4b16732bb CMakeFiles/ament_cmake_python_symlink_aura_mapping
+82066edcb3485bce829c8bbec3bbb585 CMakeFiles/aura_mapping_uninstall

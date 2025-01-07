@@ -1,0 +1,34 @@
+[0.007s] Invoking command in '/home/utk/aura_ws/build/aura_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble PYTHONPATH=/home/utk/aura_ws/install/aura_mapping/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/utk/aura_ws/build/aura_localization -- -j16 -l16
+[0.025s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.127s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.132s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.185s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.186s] -- Added test 'lint_cmake' to check CMake code style
+[0.186s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.186s] -- Added test 'xmllint' to check XML markup files
+[0.187s] -- Configuring done
+[0.190s] -- Generating done
+[0.191s] -- Build files have been written to: /home/utk/aura_ws/build/aura_localization
+[0.207s] Invoked command in '/home/utk/aura_ws/build/aura_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble PYTHONPATH=/home/utk/aura_ws/install/aura_mapping/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/utk/aura_ws/build/aura_localization -- -j16 -l16
+[0.209s] Invoking command in '/home/utk/aura_ws/build/aura_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble PYTHONPATH=/home/utk/aura_ws/install/aura_mapping/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/utk/aura_ws/build/aura_localization
+[0.214s] -- Install configuration: ""
+[0.214s] -- Execute custom install script
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/launch/global_localization.launch.py
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/config/amcl.yaml
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/rviz/global_localization.rviz
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/ament_index/resource_index/package_run_dependencies/aura_localization
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/ament_index/resource_index/parent_prefix_path/aura_localization
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/environment/ament_prefix_path.sh
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/environment/ament_prefix_path.dsv
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/environment/path.sh
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/environment/path.dsv
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/local_setup.bash
+[0.215s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/local_setup.sh
+[0.216s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/local_setup.zsh
+[0.216s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/local_setup.dsv
+[0.216s] -- Symlinking: /home/utk/aura_ws/install/aura_localization/share/aura_localization/package.dsv
+[0.222s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/ament_index/resource_index/packages/aura_localization
+[0.222s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/cmake/aura_localizationConfig.cmake
+[0.222s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/cmake/aura_localizationConfig-version.cmake
+[0.222s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_localization/share/aura_localization/package.xml
+[0.224s] Invoked command in '/home/utk/aura_ws/build/aura_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble PYTHONPATH=/home/utk/aura_ws/install/aura_mapping/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/utk/aura_ws/build/aura_localization

@@ -1,0 +1,15 @@
+/home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/package_run_dependencies/aura_navigation
+/home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/parent_prefix_path/aura_navigation
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.sh
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.dsv
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.sh
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.dsv
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.bash
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.sh
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.zsh
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.dsv
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.dsv
+/home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/packages/aura_navigation
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig.cmake
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig-version.cmake
+/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.xml
