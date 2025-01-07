@@ -1,8 +1,13 @@
 /home/utk/aura_ws/install/aura_description/share/aura_description/launch/display.launch.py
 /home/utk/aura_ws/install/aura_description/share/aura_description/launch/gazebo.launch.py
+/home/utk/aura_ws/install/aura_description/share/aura_description/meshes/arm_base.stl
+/home/utk/aura_ws/install/aura_description/share/aura_description/meshes/arm_lower.stl
+/home/utk/aura_ws/install/aura_description/share/aura_description/meshes/arm_stand.stl
+/home/utk/aura_ws/install/aura_description/share/aura_description/meshes/arm_upper.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/back_castor.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/base_link.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/camera.stl
+/home/utk/aura_ws/install/aura_description/share/aura_description/meshes/end_effector.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/front_castor.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/imu.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/left_wheel.stl
@@ -12,6 +17,7 @@
 /home/utk/aura_ws/install/aura_description/share/aura_description/meshes/wall.stl
 /home/utk/aura_ws/install/aura_description/share/aura_description/rviz/display.rviz
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura.urdf.xacro
+/home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_arm.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_base.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_gazebo.xacro
 /home/utk/aura_ws/install/aura_description/share/aura_description/urdf/aura_materials.xacro

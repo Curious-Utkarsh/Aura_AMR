@@ -3,6 +3,7 @@
 
   <xacro:include filename="$(find aura_description)/urdf/aura_materials.xacro" />
   <xacro:include filename="$(find aura_description)/urdf/aura_base.xacro" />
+  <!-- <xacro:include filename="$(find aura_description)/urdf/aura_arm.xacro" /> -->
   <xacro:include filename="$(find aura_description)/urdf/aura_gazebo.xacro" />
   <xacro:include filename="$(find aura_description)/urdf/aura_ros2control.xacro" />
     
