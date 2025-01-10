@@ -325,8 +325,8 @@ ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_controller" DI
 # install(DIRECTORY "launch" "config" "DESTINATION" "share/aura_controller")
 ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_controller" DIRECTORY "launch" "config" "DESTINATION" "share/aura_controller")
 
-# install(PROGRAMS "aura_controller/twist_relay_node.py" "DESTINATION" "lib/aura_controller")
-ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_controller" PROGRAMS "aura_controller/twist_relay_node.py" "DESTINATION" "lib/aura_controller")
+# install(PROGRAMS "aura_controller/twist_relay_node.py" "aura_controller/slider_arm.py" "DESTINATION" "lib/aura_controller")
+ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_controller" PROGRAMS "aura_controller/twist_relay_node.py" "aura_controller/slider_arm.py" "DESTINATION" "lib/aura_controller")
 
 # install(FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_controller" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_controller" FILES "/home/utk/aura_ws/build/aura_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_controller" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

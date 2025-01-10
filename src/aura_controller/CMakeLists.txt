@@ -8,8 +8,14 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
+find_package(trajectory_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
-find_package(geometry_msgs REQUIRED)
+find_package(hardware_interface REQUIRED)
+find_package(pluginlib REQUIRED)
+find_package(rclcpp_lifecycle REQUIRED)
+find_package(PkgConfig)
 
 ament_python_install_package(${PROJECT_NAME})
 
@@ -20,6 +26,7 @@ install(
 
 install(PROGRAMS
   ${PROJECT_NAME}/twist_relay_node.py
+  ${PROJECT_NAME}/slider_arm.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

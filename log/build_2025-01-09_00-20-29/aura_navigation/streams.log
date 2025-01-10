@@ -1,0 +1,25 @@
+[0.012s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.027s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.128s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.133s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.141s] [31mCMake Error at CMakeLists.txt:12 (find_package):
+[0.141s]   By not providing "Findnav2_simple_commander.cmake" in CMAKE_MODULE_PATH
+[0.142s]   this project has asked CMake to find a package configuration file provided
+[0.142s]   by "nav2_simple_commander", but CMake did not find one.
+[0.142s] 
+[0.142s]   Could not find a package configuration file provided by
+[0.142s]   "nav2_simple_commander" with any of the following names:
+[0.142s] 
+[0.142s]     nav2_simple_commanderConfig.cmake
+[0.142s]     nav2_simple_commander-config.cmake
+[0.142s] 
+[0.142s]   Add the installation prefix of "nav2_simple_commander" to CMAKE_PREFIX_PATH
+[0.142s]   or set "nav2_simple_commander_DIR" to a directory containing one of the
+[0.142s]   above files.  If "nav2_simple_commander" provides a separate development
+[0.142s]   package or SDK, be sure it has been installed.
+[0.142s] 
+[0.143s] [0m
+[0.143s] -- Configuring incomplete, errors occurred!
+[0.143s] See also "/home/utk/aura_ws/build/aura_navigation/CMakeFiles/CMakeOutput.log".
+[0.143s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.145s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16

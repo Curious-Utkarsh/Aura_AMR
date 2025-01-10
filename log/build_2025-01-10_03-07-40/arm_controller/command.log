@@ -1,0 +1,2 @@
+Invoking command in '/home/utk/aura_ws/build/arm_controller': /usr/bin/cmake /home/utk/aura_ws/src/arm_controller -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/arm_controller
+Invoked command in '/home/utk/aura_ws/build/arm_controller' returned '1': /usr/bin/cmake /home/utk/aura_ws/src/arm_controller -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/arm_controller

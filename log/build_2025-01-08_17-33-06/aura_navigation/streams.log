@@ -1,0 +1,31 @@
+[0.015s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_navigation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_navigation
+[0.023s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.128s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.143s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.203s] -- Added test 'lint_cmake' to check CMake code style
+[0.204s] -- Added test 'xmllint' to check XML markup files
+[0.205s] -- Configuring done
+[0.208s] -- Generating done
+[0.209s] -- Build files have been written to: /home/utk/aura_ws/build/aura_navigation
+[0.211s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_navigation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_navigation
+[0.212s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.241s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.249s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation
+[0.254s] -- Install configuration: ""
+[0.255s] -- Execute custom install script
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/package_run_dependencies/aura_navigation
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/parent_prefix_path/aura_navigation
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.sh
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.dsv
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.sh
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.dsv
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.bash
+[0.255s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.sh
+[0.256s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.zsh
+[0.256s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.dsv
+[0.256s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.dsv
+[0.263s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/packages/aura_navigation
+[0.263s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig.cmake
+[0.263s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig-version.cmake
+[0.263s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.xml
+[0.265s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation

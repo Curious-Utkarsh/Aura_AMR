@@ -44,12 +44,12 @@
         </collision>
     </link>
 
-    <joint name="arm_base_joint" type="revolute">
+    <joint name="joint_1" type="revolute">
         <origin xyz="0.0 0.0 0.100" rpy="0.0 0.0 0.0"/>
         <parent link="arm_stand"/>
         <child link="arm_base"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="10.0"/>
+        <limit lower="-3.14" upper="3.14" effort="30.0" velocity="10.0"/>
     </joint>
 
 
@@ -71,12 +71,12 @@
         </collision>
     </link>
 
-    <joint name="arm_lower_joint" type="revolute">
+    <joint name="joint_2" type="revolute">
         <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
         <parent link="arm_base"/>
         <child link="arm_lower"/>
         <axis xyz="0 1 0"/>
-        <limit lower="-1.57" upper="1.57" effort="10.0" velocity="10.0"/>
+        <limit lower="-1.57" upper="1.57" effort="30.0" velocity="10.0"/>
     </joint>
 
 
@@ -98,37 +98,39 @@
         </collision>
     </link>
 
-    <joint name="arm_upper_joint" type="revolute">
+    <joint name="joint_3" type="revolute">
         <origin xyz="0.0 0.0 0.14" rpy="0.0 0.0 0.0"/>
         <parent link="arm_lower"/>
         <child link="arm_upper"/>
         <axis xyz="0 1 0"/>
-        <limit lower="-2.5" upper="2.5" effort="10.0" velocity="10.0"/>
+        <limit lower="-2.5" upper="2.5" effort="30.0" velocity="10.0"/>
     </joint>
 
 
     <link name="end_effector">
-        <xacro:box_inertia m="0.100" l="0.03" w="0.03" h="0.012" 
-                                    xyz="0 0 -0.55" rpy="0 0 0" />
+        <xacro:box_inertia m="0.150" l="0.04" w="0.04" h="0.03" 
+                                    xyz="0 0 -0.565" rpy="0 0 0" />
         <visual>
-            <origin xyz="0 0 -0.55" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.565" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://aura_description/meshes/end_effector.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="matte_brown"/>
         </visual>
         <collision>
-            <origin xyz="0 0 -0.55" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.565" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://aura_description/meshes/end_effector.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
 
-    <joint name="end_effector_joint" type="fixed">
+    <joint name="joint_4" type="revolute">
         <origin xyz="0.0 0.0 0.16" rpy="0.0 0.0 0.0"/>
         <parent link="arm_upper"/>
         <child link="end_effector"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="30.0" velocity="10.0"/>
     </joint>
     
 </robot>

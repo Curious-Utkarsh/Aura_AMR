@@ -5,11 +5,12 @@ controller_manager:
     aura_controller:
       type: diff_drive_controller/DiffDriveController
 
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
-      joints:
-        - left_wheel_joint
-        - right_wheel_joint
+
 
 aura_controller:
   ros__parameters:
@@ -64,3 +65,34 @@ aura_controller:
         min_acceleration       : -6.0   # rad/s^2
         has_jerk_limits        : false
         max_jerk               : 2.5  # rad/s^3
+
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+    controller_frequency: 10
+
+
+
+
+
+
+
+
+
+
+
+

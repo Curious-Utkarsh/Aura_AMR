@@ -9,6 +9,10 @@
 /home/utk/aura_ws/install/aura_mapping/share/aura_mapping/config/exploration_params.yaml
 /home/utk/aura_ws/install/aura_mapping/share/aura_mapping/config/slam_toolbox.yaml
 /home/utk/aura_ws/install/aura_mapping/share/aura_mapping/launch/slam.launch.py
+/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/maps/small_house/map.pgm
+/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/maps/small_house/map.yaml
+/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/maps/small_warehouse/map.pgm
+/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/maps/small_warehouse/map.yaml
 /home/utk/aura_ws/install/aura_mapping/share/aura_mapping/rviz/slam.rviz
 /home/utk/aura_ws/install/aura_mapping/lib/aura_mapping/aura_frontier_exploration.py
 /home/utk/aura_ws/install/aura_mapping/share/ament_index/resource_index/package_run_dependencies/aura_mapping

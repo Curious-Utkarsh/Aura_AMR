@@ -197,6 +197,32 @@ aura_navigation_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aura_navigation_uninstall.dir/build.make CMakeFiles/aura_navigation_uninstall.dir/build
 .PHONY : aura_navigation_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_aura_navigation
+
+# Build rule for target.
+ament_cmake_python_symlink_aura_navigation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_aura_navigation
+.PHONY : ament_cmake_python_symlink_aura_navigation
+
+# fast build rule for target.
+ament_cmake_python_symlink_aura_navigation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build
+.PHONY : ament_cmake_python_symlink_aura_navigation/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_build_aura_navigation_egg
+
+# Build rule for target.
+ament_cmake_python_build_aura_navigation_egg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_build_aura_navigation_egg
+.PHONY : ament_cmake_python_build_aura_navigation_egg
+
+# fast build rule for target.
+ament_cmake_python_build_aura_navigation_egg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/build
+.PHONY : ament_cmake_python_build_aura_navigation_egg/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +236,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ament_cmake_python_build_aura_navigation_egg"
+	@echo "... ament_cmake_python_symlink_aura_navigation"
 	@echo "... aura_navigation_uninstall"
 	@echo "... uninstall"
 .PHONY : help

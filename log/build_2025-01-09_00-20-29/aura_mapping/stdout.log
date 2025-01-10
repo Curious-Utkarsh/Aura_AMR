@@ -1,0 +1,8 @@
+Built target ament_cmake_python_symlink_aura_mapping
+running egg_info
+writing aura_mapping.egg-info/PKG-INFO
+writing dependency_links to aura_mapping.egg-info/dependency_links.txt
+writing top-level names to aura_mapping.egg-info/top_level.txt
+reading manifest file 'aura_mapping.egg-info/SOURCES.txt'
+writing manifest file 'aura_mapping.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_aura_mapping_egg

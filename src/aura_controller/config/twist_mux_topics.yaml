@@ -6,7 +6,7 @@ twist_mux:
         topic   : joy_vel
         timeout : 0.5
         priority: 99
-      keyboard: 
-        topic   : key_vel
+      navigation: 
+        topic   : cmd_vel
         timeout : 0.5
         priority: 90

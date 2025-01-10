@@ -447,3 +447,55 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5416a/fast && gmake[1]: Entering directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_5416a.dir/build.make CMakeFiles/cmTC_5416a.dir/build
+gmake[2]: Entering directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5416a.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5416a.dir/CheckIncludeFile.c.o -c /home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5416a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5416a.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_5416a.dir/CheckIncludeFile.c.o -o cmTC_5416a 
+gmake[2]: Leaving directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6f589/fast && gmake[1]: Entering directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_6f589.dir/build.make CMakeFiles/cmTC_6f589.dir/build
+gmake[2]: Entering directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f589.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6f589.dir/src.c.o -c /home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6f589
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f589.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_6f589.dir/src.c.o -o cmTC_6f589 
+gmake[2]: Leaving directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/home/utk/aura_ws/build/aura_controller/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

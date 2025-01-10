@@ -1,0 +1,468 @@
+[0.211s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.211s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x719d9964b3d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x719d997907c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x719d997907c0>>)
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.436s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/utk/aura_ws'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extension 'ignore_ament_install'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extensions ['colcon_pkg']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extension 'colcon_pkg'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extensions ['colcon_meta']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extension 'colcon_meta'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extensions ['ros']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_bringup) by extension 'ros'
+[0.454s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_bringup' with type 'ros.ament_cmake' and name 'aura_bringup'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extension 'ignore'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extension 'ignore_ament_install'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extensions ['colcon_pkg']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extension 'colcon_pkg'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extensions ['colcon_meta']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extension 'colcon_meta'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extensions ['ros']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_controller) by extension 'ros'
+[0.455s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_controller' with type 'ros.ament_cmake' and name 'aura_controller'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extensions ['ignore', 'ignore_ament_install']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extension 'ignore'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extension 'ignore_ament_install'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extensions ['colcon_pkg']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extension 'colcon_pkg'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extensions ['colcon_meta']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extension 'colcon_meta'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extensions ['ros']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_description) by extension 'ros'
+[0.457s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_description' with type 'ros.ament_cmake' and name 'aura_description'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extension 'ignore'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extension 'ignore_ament_install'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extensions ['colcon_pkg']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extension 'colcon_pkg'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extensions ['colcon_meta']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extension 'colcon_meta'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extensions ['ros']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_localization) by extension 'ros'
+[0.458s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_localization' with type 'ros.ament_cmake' and name 'aura_localization'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extension 'ignore'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extension 'ignore_ament_install'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extensions ['colcon_pkg']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extension 'colcon_pkg'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extension 'colcon_meta'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extensions ['ros']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_mapping) by extension 'ros'
+[0.459s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_mapping' with type 'ros.ament_cmake' and name 'aura_mapping'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extension 'ignore'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extension 'ignore_ament_install'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extension 'colcon_pkg'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extensions ['colcon_meta']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extension 'colcon_meta'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extensions ['ros']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/aura_navigation) by extension 'ros'
+[0.460s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aura_navigation' with type 'ros.ament_cmake' and name 'aura_navigation'
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.484s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/utk/aura_ws/install
+[0.485s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/utk/bumperbot_ws/install
+[0.486s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 508 installed packages in /opt/ros/humble
+[0.488s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_target' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.537s] DEBUG:colcon.colcon_core.verb:Building package 'aura_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_controller', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_controller', 'symlink_install': False, 'test_result_base': None}
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_target' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'aura_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.537s] DEBUG:colcon.colcon_core.verb:Building package 'aura_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_description', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_description', 'symlink_install': False, 'test_result_base': None}
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_target' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_clean_cache' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_clean_first' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'cmake_force_configure' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'ament_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'catkin_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_mapping' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.538s] DEBUG:colcon.colcon_core.verb:Building package 'aura_mapping' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_mapping', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_mapping', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_mapping', 'symlink_install': False, 'test_result_base': None}
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_target' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.538s] DEBUG:colcon.colcon_core.verb:Building package 'aura_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_navigation', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_navigation', 'symlink_install': False, 'test_result_base': None}
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_target' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'aura_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.538s] DEBUG:colcon.colcon_core.verb:Building package 'aura_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_bringup', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_args' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_target' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'aura_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.539s] DEBUG:colcon.colcon_core.verb:Building package 'aura_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/utk/aura_ws/build/aura_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/utk/aura_ws/install/aura_localization', 'merge_install': False, 'path': '/home/utk/aura_ws/src/aura_localization', 'symlink_install': False, 'test_result_base': None}
+[0.539s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.539s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.540s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_controller' with build type 'ament_cmake'
+[0.540s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_controller'
+[0.543s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.547s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_description' with build type 'ament_cmake'
+[0.547s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_description'
+[0.547s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.547s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.550s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_mapping' with build type 'ament_cmake'
+[0.550s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_mapping'
+[0.550s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.550s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.553s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_navigation' with build type 'ament_cmake'
+[0.553s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_navigation'
+[0.553s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.553s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_controller -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_controller
+[0.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_description -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_description
+[0.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_mapping -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_mapping
+[0.572s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_navigation -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_navigation
+[0.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_navigation -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_navigation
+[0.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_description -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_description
+[0.869s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_description -- -j16 -l16
+[0.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_description -- -j16 -l16
+[0.905s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_description
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_controller -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_controller
+[0.948s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_controller -- -j16 -l16
+[0.981s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_mapping -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_mapping
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_mapping -- -j16 -l16
+[1.017s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_description)
+[1.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_description
+[1.023s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description' for CMake module files
+[1.023s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description' for CMake config files
+[1.023s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_description', 'cmake_prefix_path')
+[1.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.ps1'
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.dsv'
+[1.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.sh'
+[1.026s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/bin'
+[1.026s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/lib/pkgconfig/aura_description.pc'
+[1.026s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/lib/python3.10/site-packages'
+[1.026s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/bin'
+[1.026s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.ps1'
+[1.027s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_description/share/aura_description/package.dsv'
+[1.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.sh'
+[1.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.bash'
+[1.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.zsh'
+[1.030s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_description/share/colcon-core/packages/aura_description)
+[1.030s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_description)
+[1.031s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description' for CMake module files
+[1.031s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description' for CMake config files
+[1.031s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_description', 'cmake_prefix_path')
+[1.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.ps1'
+[1.031s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.dsv'
+[1.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_description/share/aura_description/hook/cmake_prefix_path.sh'
+[1.032s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/bin'
+[1.032s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/lib/pkgconfig/aura_description.pc'
+[1.032s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/lib/python3.10/site-packages'
+[1.032s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_description/bin'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.ps1'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_description/share/aura_description/package.dsv'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.sh'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.bash'
+[1.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_description/share/aura_description/package.zsh'
+[1.034s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_description/share/colcon-core/packages/aura_description)
+[1.094s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[1.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation
+[1.142s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_navigation)
+[1.142s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation' for CMake module files
+[1.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation
+[1.142s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation' for CMake config files
+[1.143s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_navigation', 'cmake_prefix_path')
+[1.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.ps1'
+[1.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.dsv'
+[1.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.sh'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/bin'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib/pkgconfig/aura_navigation.pc'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib/python3.10/site-packages'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/bin'
+[1.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.ps1'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.dsv'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.sh'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.bash'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.zsh'
+[1.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_navigation/share/colcon-core/packages/aura_navigation)
+[1.146s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_navigation)
+[1.146s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation' for CMake module files
+[1.146s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation' for CMake config files
+[1.146s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_navigation', 'cmake_prefix_path')
+[1.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.ps1'
+[1.147s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.dsv'
+[1.147s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/hook/cmake_prefix_path.sh'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/bin'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib/pkgconfig/aura_navigation.pc'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/lib/python3.10/site-packages'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_navigation/bin'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.ps1'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.dsv'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.sh'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.bash'
+[1.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.zsh'
+[1.149s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_navigation/share/colcon-core/packages/aura_navigation)
+[1.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_controller -- -j16 -l16
+[1.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_controller
+[1.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_mapping -- -j16 -l16
+[1.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_mapping
+[1.242s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_controller)
+[1.243s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller' for CMake module files
+[1.243s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_controller
+[1.243s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller' for CMake config files
+[1.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_controller', 'cmake_prefix_path')
+[1.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.ps1'
+[1.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.dsv'
+[1.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.sh'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/bin'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib/pkgconfig/aura_controller.pc'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib/python3.10/site-packages'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/bin'
+[1.245s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.ps1'
+[1.245s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.dsv'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.sh'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.bash'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.zsh'
+[1.246s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_controller/share/colcon-core/packages/aura_controller)
+[1.247s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_controller)
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller' for CMake module files
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller' for CMake config files
+[1.247s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_controller', 'cmake_prefix_path')
+[1.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.ps1'
+[1.248s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.dsv'
+[1.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_controller/share/aura_controller/hook/cmake_prefix_path.sh'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/bin'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib/pkgconfig/aura_controller.pc'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/lib/python3.10/site-packages'
+[1.249s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_controller/bin'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.ps1'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.dsv'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.sh'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.bash'
+[1.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_controller/share/aura_controller/package.zsh'
+[1.250s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_controller/share/colcon-core/packages/aura_controller)
+[1.250s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_bringup' with build type 'ament_cmake'
+[1.250s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_bringup'
+[1.251s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.251s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.259s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_bringup': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_bringup -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_bringup
+[1.274s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_mapping)
+[1.274s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping' for CMake module files
+[1.274s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_mapping
+[1.275s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping' for CMake config files
+[1.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_mapping', 'cmake_prefix_path')
+[1.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.ps1'
+[1.275s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.dsv'
+[1.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.sh'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/bin'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib/pkgconfig/aura_mapping.pc'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib/python3.10/site-packages'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/bin'
+[1.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.ps1'
+[1.277s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.dsv'
+[1.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.sh'
+[1.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.bash'
+[1.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.zsh'
+[1.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_mapping/share/colcon-core/packages/aura_mapping)
+[1.278s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_mapping)
+[1.278s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping' for CMake module files
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping' for CMake config files
+[1.279s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_mapping', 'cmake_prefix_path')
+[1.279s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.ps1'
+[1.279s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.dsv'
+[1.279s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/hook/cmake_prefix_path.sh'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/bin'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib/pkgconfig/aura_mapping.pc'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/lib/python3.10/site-packages'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_mapping/bin'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.ps1'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.dsv'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.sh'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.bash'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_mapping/share/aura_mapping/package.zsh'
+[1.281s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_mapping/share/colcon-core/packages/aura_mapping)
+[1.282s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/utk/aura_ws/src/aura_localization' with build type 'ament_cmake'
+[1.282s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/utk/aura_ws/src/aura_localization'
+[1.282s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.282s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_localization': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_localization -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_localization
+[1.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_bringup' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_bringup -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_bringup
+[1.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_bringup': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_bringup -- -j16 -l16
+[1.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_bringup' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_bringup -- -j16 -l16
+[1.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_bringup': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_bringup
+[1.446s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_localization' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake /home/utk/aura_ws/src/aura_localization -DCMAKE_INSTALL_PREFIX=/home/utk/aura_ws/install/aura_localization
+[1.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_localization': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_localization -- -j16 -l16
+[1.455s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_bringup)
+[1.455s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup' for CMake module files
+[1.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_bringup' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_bringup:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_bringup
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup' for CMake config files
+[1.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_bringup', 'cmake_prefix_path')
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.ps1'
+[1.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.sh'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/bin'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/lib/pkgconfig/aura_bringup.pc'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/lib/python3.10/site-packages'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/bin'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.ps1'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.dsv'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.sh'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.bash'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.zsh'
+[1.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_bringup/share/colcon-core/packages/aura_bringup)
+[1.459s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_bringup)
+[1.459s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup' for CMake module files
+[1.459s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup' for CMake config files
+[1.459s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_bringup', 'cmake_prefix_path')
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.ps1'
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.dsv'
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/hook/cmake_prefix_path.sh'
+[1.460s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/bin'
+[1.460s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/lib/pkgconfig/aura_bringup.pc'
+[1.460s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/lib/python3.10/site-packages'
+[1.461s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_bringup/bin'
+[1.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.ps1'
+[1.461s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.dsv'
+[1.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.sh'
+[1.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.bash'
+[1.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_bringup/share/aura_bringup/package.zsh'
+[1.462s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_bringup/share/colcon-core/packages/aura_bringup)
+[1.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_localization' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_localization -- -j16 -l16
+[1.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/utk/aura_ws/build/aura_localization': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_localization
+[1.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_localization)
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization' for CMake module files
+[1.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/utk/aura_ws/build/aura_localization' returned '0': CMAKE_PREFIX_PATH=/home/utk/aura_ws/install/aura_mapping:/home/utk/aura_ws/install/aura_navigation:/home/utk/aura_ws/install/aura_localization:/home/utk/aura_ws/install/aura_bringup:/home/utk/aura_ws/install/aura_description:/home/utk/aura_ws/install/aura_controller:/home/utk/bumperbot_ws/install/bumperbot_utils:/home/utk/bumperbot_ws/install/bumperbot_cpp_examples:/home/utk/bumperbot_ws/install/bumperbot_msgs:/home/utk/bumperbot_ws/install/bumperbot_bringup:/home/utk/bumperbot_ws/install/bumperbot_mapping:/home/utk/bumperbot_ws/install/bumperbot_localization:/home/utk/bumperbot_ws/install/bumperbot_firmware:/home/utk/bumperbot_ws/install/bumperbot_description:/home/utk/bumperbot_ws/install/bumperbot_controller:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_localization
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization' for CMake config files
+[1.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_localization', 'cmake_prefix_path')
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.ps1'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.dsv'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.sh'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/bin'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/lib/pkgconfig/aura_localization.pc'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/lib/python3.10/site-packages'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/bin'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.dsv'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.sh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.bash'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.zsh'
+[1.490s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_localization/share/colcon-core/packages/aura_localization)
+[1.490s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aura_localization)
+[1.491s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization' for CMake module files
+[1.491s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization' for CMake config files
+[1.491s] Level 1:colcon.colcon_core.shell:create_environment_hook('aura_localization', 'cmake_prefix_path')
+[1.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.ps1'
+[1.491s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.dsv'
+[1.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/utk/aura_ws/install/aura_localization/share/aura_localization/hook/cmake_prefix_path.sh'
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/bin'
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/lib/pkgconfig/aura_localization.pc'
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/lib/python3.10/site-packages'
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/utk/aura_ws/install/aura_localization/bin'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.ps1'
+[1.493s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.dsv'
+[1.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.sh'
+[1.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.bash'
+[1.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/utk/aura_ws/install/aura_localization/share/aura_localization/package.zsh'
+[1.494s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/utk/aura_ws/install/aura_localization/share/colcon-core/packages/aura_localization)
+[1.494s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.494s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.494s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.494s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.499s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.499s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.499s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.513s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.514s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/utk/aura_ws/install/local_setup.ps1'
+[1.515s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/utk/aura_ws/install/_local_setup_util_ps1.py'
+[1.516s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/utk/aura_ws/install/setup.ps1'
+[1.517s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/utk/aura_ws/install/local_setup.sh'
+[1.517s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/utk/aura_ws/install/_local_setup_util_sh.py'
+[1.518s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/utk/aura_ws/install/setup.sh'
+[1.519s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/utk/aura_ws/install/local_setup.bash'
+[1.519s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/utk/aura_ws/install/setup.bash'
+[1.520s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/utk/aura_ws/install/local_setup.zsh'
+[1.521s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/utk/aura_ws/install/setup.zsh'

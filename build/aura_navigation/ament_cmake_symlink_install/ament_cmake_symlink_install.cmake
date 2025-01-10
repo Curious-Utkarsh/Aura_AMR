@@ -310,6 +310,24 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install(FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/aura_navigation/environment")
+ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_navigation" FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/aura_navigation/environment")
+
+# install(FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/aura_navigation/environment")
+ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_navigation" FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/aura_navigation/environment")
+
+# install(DIRECTORY "/home/utk/aura_ws/build/aura_navigation/ament_cmake_python/aura_navigation/aura_navigation.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_navigation" DIRECTORY "/home/utk/aura_ws/build/aura_navigation/ament_cmake_python/aura_navigation/aura_navigation.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info")
+
+# install(DIRECTORY "/home/utk/aura_ws/src/aura_navigation/aura_navigation/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_navigation" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_navigation" DIRECTORY "/home/utk/aura_ws/src/aura_navigation/aura_navigation/" "DESTINATION" "local/lib/python3.10/dist-packages/aura_navigation" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+
+# install(DIRECTORY "launch" "config" "DESTINATION" "share/aura_navigation")
+ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_navigation" DIRECTORY "launch" "config" "DESTINATION" "share/aura_navigation")
+
+# install(PROGRAMS "aura_navigation/navigation.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
+ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_navigation" PROGRAMS "aura_navigation/navigation.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
+
 # install(FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_navigation" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_navigation" FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_navigation" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

@@ -1,0 +1,59 @@
+[0.012s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.026s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.122s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.127s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.189s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.248s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.249s] -- Added test 'lint_cmake' to check CMake code style
+[0.249s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.250s] -- Added test 'xmllint' to check XML markup files
+[0.251s] -- Configuring done
+[0.256s] -- Generating done
+[0.257s] -- Build files have been written to: /home/utk/aura_ws/build/aura_navigation
+[0.283s] Built target ament_cmake_python_symlink_aura_navigation
+[0.517s] running egg_info
+[0.517s] creating aura_navigation.egg-info
+[0.517s] writing aura_navigation.egg-info/PKG-INFO
+[0.517s] writing dependency_links to aura_navigation.egg-info/dependency_links.txt
+[0.518s] writing top-level names to aura_navigation.egg-info/top_level.txt
+[0.518s] writing manifest file 'aura_navigation.egg-info/SOURCES.txt'
+[0.519s] reading manifest file 'aura_navigation.egg-info/SOURCES.txt'
+[0.520s] writing manifest file 'aura_navigation.egg-info/SOURCES.txt'
+[0.538s] Built target ament_cmake_python_build_aura_navigation_egg
+[0.545s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_navigation -- -j16 -l16
+[0.547s] Invoking command in '/home/utk/aura_ws/build/aura_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation
+[0.551s] -- Install configuration: ""
+[0.552s] -- Execute custom install script
+[0.552s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/pythonpath.sh
+[0.559s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/pythonpath.dsv
+[0.566s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info/PKG-INFO
+[0.573s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.581s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.587s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation-0.0.0-py3.10.egg-info/top_level.txt
+[0.594s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/__init__.py
+[0.601s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/navigation.py
+[0.607s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/pose_estimator.py
+[0.613s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/launch/navigation.launch.py
+[0.613s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/config/nav2_params.yaml
+[0.613s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/lib/aura_navigation/navigation.py
+[0.619s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/lib/aura_navigation/pose_estimator.py
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/package_run_dependencies/aura_navigation
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/parent_prefix_path/aura_navigation
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.sh
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/ament_prefix_path.dsv
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.sh
+[0.625s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/environment/path.dsv
+[0.626s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.bash
+[0.626s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.sh
+[0.626s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.zsh
+[0.626s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/local_setup.dsv
+[0.626s] -- Symlinking: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.dsv
+[0.633s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/ament_index/resource_index/packages/aura_navigation
+[0.633s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig.cmake
+[0.633s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/cmake/aura_navigationConfig-version.cmake
+[0.633s] -- Up-to-date symlink: /home/utk/aura_ws/install/aura_navigation/share/aura_navigation/package.xml
+[0.659s] Listing '/home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation'...
+[0.659s] Compiling '/home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/__init__.py'...
+[0.660s] Compiling '/home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/navigation.py'...
+[0.660s] Compiling '/home/utk/aura_ws/install/aura_navigation/local/lib/python3.10/dist-packages/aura_navigation/pose_estimator.py'...
+[0.665s] Invoked command in '/home/utk/aura_ws/build/aura_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --install /home/utk/aura_ws/build/aura_navigation

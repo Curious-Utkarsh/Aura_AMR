@@ -1,5 +1,6 @@
 setup.py
 aura_controller/__init__.py
+aura_controller/slider_arm.py
 aura_controller/twist_relay_node.py
 aura_controller.egg-info/PKG-INFO
 aura_controller.egg-info/SOURCES.txt

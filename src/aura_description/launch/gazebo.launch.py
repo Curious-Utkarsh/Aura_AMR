@@ -66,13 +66,23 @@ def generate_launch_description():
                 }.items()
              )
 
+
     gz_spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
         output="screen",
-        arguments=["-topic", "robot_description",
-                   "-name", "aura"],
+        arguments=[
+            "-topic", "robot_description",
+            "-name", "aura",
+            "-x", "2.0",  
+            "-y", "4.8",  
+            "-z", "0.0",  
+            "-R", "0.0", 
+            "-P", "0.0",
+            "-Y", "1.57", # Yaw (in radians, e.g., 1.57 for 90 degrees)
+        ],
     )
+
 
     gz_ros2_bridge = Node(
         package="ros_gz_bridge",

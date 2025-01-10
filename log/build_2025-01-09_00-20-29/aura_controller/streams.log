@@ -1,0 +1,9 @@
+[0.017s] Invoking command in '/home/utk/aura_ws/build/aura_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_controller -- -j16 -l16
+[0.053s] Built target ament_cmake_python_symlink_aura_controller
+[0.262s] running egg_info
+[0.262s] writing aura_controller.egg-info/PKG-INFO
+[0.262s] writing dependency_links to aura_controller.egg-info/dependency_links.txt
+[0.262s] writing top-level names to aura_controller.egg-info/top_level.txt
+[0.264s] reading manifest file 'aura_controller.egg-info/SOURCES.txt'
+[0.264s] writing manifest file 'aura_controller.egg-info/SOURCES.txt'
+[0.281s] Built target ament_cmake_python_build_aura_controller_egg
