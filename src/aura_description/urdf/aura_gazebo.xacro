@@ -48,11 +48,18 @@
         <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
             <parameters>$(find aura_controller)/config/aura_controllers.yaml</parameters>
         </plugin>
+
         <plugin filename="ignition-gazebo-imu-system" name="ignition::gazebo::systems::Imu">
         </plugin>
+
         <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
+
+        <!-- <gazebo>
+            <plugin filename="libignition-gazebo-link-attacher-system.so" name="ignition::gazebo::systems::LinkAttacher"/>
+        </gazebo> -->
+
     </gazebo>
 
 

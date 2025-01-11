@@ -7,7 +7,9 @@ from cv_bridge import CvBridge
 import numpy as np
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from nav2_simple_commander.robot_navigator import BasicNavigator
-import multiprocessing
+import multiprocessing 
+from std_msgs.msg import Bool
+import random
 
 
 class TaskNode(Node):
@@ -28,10 +30,21 @@ class TaskNode(Node):
         self.left_ray = 0.0
         self.right_ray = 0.0
         self.dock_threshold = 0.2
+        self.battery_low = False
+        self.obstacle_avoid_threshold = 1.5
+        self.turn_taking = False
+        self.turn_taken = False
+        self.turn_right = False
+        self.decision_made = False
+        self.start_bot = False
         self.vel_pub = self.create_publisher(Twist, "/cmd_vel", 10)
         self.cam_sub = self.create_subscription(Image, "/camera/image_raw", self.camera_callback, 10)
         self.imu_sub = self.create_subscription(Imu, "/imu/out", self.imu_callback, 10)
         self.lidar_sub = self.create_subscription(LaserScan, "/scan", self.lidar_callback, 10)
+        self.battety_sub = self.create_subscription(Bool, "/battery_status", self.battery_callback, 10)
+
+    def battery_callback(self, battery_status):
+        self.battery_low = battery_status.data
 
     def velocity_publisher(self, x, z):
         vel = Twist()
@@ -77,7 +90,6 @@ class TaskNode(Node):
                     error = 320 - center_x #Error in Alignment
 
                     self.markerDetect = True
-                    self.dock_found = True
 
         cv2.imshow('Frame', self.frame)
         cv2.waitKey(1)
@@ -99,7 +111,10 @@ class TaskNode(Node):
                 self.in_dock = False
                 if self.goal_done == False:
                     print("Going on Journey!!")
-                    self.set_goal() # Go to Goal Poses
+                    if self.battery_low == True:
+                        self.set_goal() # Go to Goal Pose
+                    else:
+                        self.random_obstacle_avoidance()
 
         if self.goal_done == True: #Go Back to Dock
             thres_front = 0.8
@@ -114,30 +129,25 @@ class TaskNode(Node):
                     vel_x = 0.08
                     vel_z = -self.yaw/5.0
                     print("Docking!!")
+
                 if abs(self.yaw) < 0.2 and self.front_ray < self.dock_threshold and self.right_ray < self.dock_threshold and self.left_ray < self.dock_threshold:
-                    self.flag = False
+                    vel_x = 0.0
+                    vel_z = 0.0
+                    self.in_dock = True
+                    self.orient = False
+                    self.markerDetect = False
+                    self.goal_done = False
+                    self.phase_1 = False
+                    self.start_bot = False
+                    self.battery_low = False
+                    print("Docked Successfully!!")
             else:
                 vel_x = 0.08
                 vel_z = float(error/100.0)
                 # print(vel_z)
                 print("Aligning To Dock!!")
-
-            if self.front_ray < self.dock_threshold and self.right_ray < self.dock_threshold and self.left_ray < self.dock_threshold and self.flag == False:
-                vel_x = 0.0
-                vel_z = 0.0
-                self.in_dock = True
-                self.orient = False
-                self.markerDetect = False
-                self.goal_done = False
-                self.phase_1 = False
-                self.dock_found = False
-                self.flag = True
-                print("Docked Successfully!!")
-            
+ 
             self.velocity_publisher(vel_x, vel_z)
-
-
-            
 
     def set_goal(self):
         self.nav.waitUntilNav2Active()
@@ -155,6 +165,60 @@ class TaskNode(Node):
         print(self.nav.getResult())
         self.goal_done = True
         print("Journey Done!!")
+
+    def random_obstacle_avoidance(self):
+        if self.front_ray < self.obstacle_avoid_threshold or self.left_ray < self.obstacle_avoid_threshold or self.right_ray < self.obstacle_avoid_threshold:
+            print("OBSTACLE DETECTED")
+            if self.turn_taking == False:
+                imu_current_yaw = self.yaw
+                self.turn_taking == True
+
+            if self.decision_made == False:
+                if self.left_ray > self.right_ray:
+                    print("TAKE LEFT TURN")
+                    self.turn_right = False
+                elif self.right_ray > self.left_ray:
+                    print("TAKE RIGHT TURN")
+                    self.turn_right = True
+                else:  # Equal distances, pick randomly
+                    self.turn_right = random.choice([True, False])
+                    print("EQUAL DISTANCES, RANDOMLY CHOSEN:", "RIGHT" if self.turn_right else "LEFT")
+
+                self.decision_made = True
+                self.turn_taken = False
+
+
+            if self.turn_taken == False:
+                if self.turn_right == False:
+                    if (abs(imu_current_yaw) - abs(self.yaw)) < 1.57:
+                        print("TAKING TURN")
+                        vel_x = 0.0
+                        vel_z = 0.8
+                    else:
+                        print("LEFT TURN TAKEN")
+                        self.turn_taken = True
+                        self.turn_taking = False
+                        self.decision_made = False
+                        self.turn_right = False
+
+                else:
+                    if (abs(imu_current_yaw) - abs(self.yaw)) < 1.57:
+                        print("TAKING TURN")
+                        vel_x = 0.0
+                        vel_z = -0.8
+                    else:
+                        print("RIGHT TURN TAKEN")
+                        self.turn_taken = True
+                        self.turn_taking = False
+                        self.decision_made = False
+                        self.turn_right = False
+        else:
+            print("MOVING FORWARD")
+            vel_x = 0.4
+            vel_z = 0.0
+
+        self.velocity_publisher(vel_x, vel_z)
+
 
 
     def detect_aruco_pose(self, img):
