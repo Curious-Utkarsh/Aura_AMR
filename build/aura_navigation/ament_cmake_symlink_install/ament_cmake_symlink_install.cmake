@@ -325,8 +325,8 @@ ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_navigation" DI
 # install(DIRECTORY "launch" "config" "DESTINATION" "share/aura_navigation")
 ament_cmake_symlink_install_directory("/home/utk/aura_ws/src/aura_navigation" DIRECTORY "launch" "config" "DESTINATION" "share/aura_navigation")
 
-# install(PROGRAMS "aura_navigation/navigation.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
-ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_navigation" PROGRAMS "aura_navigation/navigation.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
+# install(PROGRAMS "aura_navigation/waypoint_following.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
+ament_cmake_symlink_install_programs("/home/utk/aura_ws/src/aura_navigation" PROGRAMS "aura_navigation/waypoint_following.py" "aura_navigation/pose_estimator.py" "DESTINATION" "lib/aura_navigation")
 
 # install(FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_navigation" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/utk/aura_ws/src/aura_navigation" FILES "/home/utk/aura_ws/build/aura_navigation/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/aura_navigation" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

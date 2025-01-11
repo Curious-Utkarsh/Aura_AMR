@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+aura_script/__init__.py
+aura_script/task.py
+aura_script.egg-info/PKG-INFO
+aura_script.egg-info/SOURCES.txt
+aura_script.egg-info/dependency_links.txt
+aura_script.egg-info/entry_points.txt
+aura_script.egg-info/requires.txt
+aura_script.egg-info/top_level.txt
+aura_script.egg-info/zip-safe
+resource/aura_script

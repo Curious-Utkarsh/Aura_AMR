@@ -1,0 +1,23 @@
+[0.717s] Invoking command in '/home/utk/aura_ws/build/aura_script': PYTHONPATH=/home/utk/aura_ws/build/aura_script/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/utk/aura_ws/install/aura_script/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/utk/aura_ws/build/aura_script/build --no-deps symlink_data
+[0.896s] running develop
+[1.018s] running egg_info
+[1.018s] creating aura_script.egg-info
+[1.018s] writing aura_script.egg-info/PKG-INFO
+[1.018s] writing dependency_links to aura_script.egg-info/dependency_links.txt
+[1.018s] writing entry points to aura_script.egg-info/entry_points.txt
+[1.018s] writing requirements to aura_script.egg-info/requires.txt
+[1.018s] writing top-level names to aura_script.egg-info/top_level.txt
+[1.018s] writing manifest file 'aura_script.egg-info/SOURCES.txt'
+[1.019s] reading manifest file 'aura_script.egg-info/SOURCES.txt'
+[1.019s] writing manifest file 'aura_script.egg-info/SOURCES.txt'
+[1.020s] running build_ext
+[1.020s] Creating /home/utk/aura_ws/install/aura_script/lib/python3.10/site-packages/aura-script.egg-link (link to .)
+[1.021s] 
+[1.021s] Installed /home/utk/aura_ws/build/aura_script
+[1.021s] running symlink_data
+[1.021s] creating /home/utk/aura_ws/install/aura_script/share/ament_index
+[1.021s] creating /home/utk/aura_ws/install/aura_script/share/ament_index/resource_index
+[1.021s] creating /home/utk/aura_ws/install/aura_script/share/ament_index/resource_index/packages
+[1.021s] symbolically linking /home/utk/aura_ws/build/aura_script/resource/aura_script -> /home/utk/aura_ws/install/aura_script/share/ament_index/resource_index/packages
+[1.031s] symbolically linking /home/utk/aura_ws/build/aura_script/package.xml -> /home/utk/aura_ws/install/aura_script/share/aura_script
+[1.047s] Invoked command in '/home/utk/aura_ws/build/aura_script' returned '0': PYTHONPATH=/home/utk/aura_ws/build/aura_script/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/utk/aura_ws/install/aura_script/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/utk/aura_ws/build/aura_script/build --no-deps symlink_data

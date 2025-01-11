@@ -29,6 +29,15 @@ def generate_launch_description():
             "gazebo.launch.py"
         ),
     )
+
+    rviz = Node(
+        package='rviz2', 
+        executable='rviz2', 
+        name='rviz', 
+        output='screen',
+        # arguments=['-d', slam_rviz_config_path]  #For Mapping
+        arguments=['-d', localization_rviz_config_path] #For Localization
+    )
     
     controller = IncludeLaunchDescription(
         os.path.join(
@@ -38,21 +47,25 @@ def generate_launch_description():
         ),
     )
 
-    # rviz = IncludeLaunchDescription(
-    #     os.path.join(
-    #         get_package_share_directory("aura_description"),
-    #         "launch",
-    #         "display.launch.py"
-    #     ),
-    # )
+    global_localization = IncludeLaunchDescription(
+        os.path.join(
+            get_package_share_directory("aura_localization"),
+            "launch", 
+            "global_localization.launch.py"
+            ),
+        )
     
-    rviz = Node(
-        package='rviz2', 
-        executable='rviz2', 
-        name='rviz', 
-        output='screen',
-        # arguments=['-d', slam_rviz_config_path]  #For Mapping
-        arguments=['-d', localization_rviz_config_path]
+    navigation = IncludeLaunchDescription(
+        os.path.join(get_package_share_directory("aura_navigation"),
+                      "launch",
+                      "navigation.launch.py"
+                      ),
+    )
+
+    pose_estimator = Node(
+        package="aura_navigation",
+        executable="pose_estimator.py",
+        name="pose_estimator",
     )
     
     joystick = IncludeLaunchDescription(
@@ -68,7 +81,10 @@ def generate_launch_description():
     
     return LaunchDescription([
         gazebo,
-        controller,
         rviz,
+        controller,
+        global_localization,
+        navigation,
+        pose_estimator,
         joystick,
     ])

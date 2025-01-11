@@ -18,7 +18,7 @@ install(
 )
 
 install(PROGRAMS
-  ${PROJECT_NAME}/navigation.py
+  ${PROJECT_NAME}/waypoint_following.py
   ${PROJECT_NAME}/pose_estimator.py
   DESTINATION lib/${PROJECT_NAME}  
 )
