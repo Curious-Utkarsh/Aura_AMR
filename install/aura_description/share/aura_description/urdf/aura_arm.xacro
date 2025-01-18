@@ -1,1 +1,220 @@
-/home/utk/aura_ws/src/aura_description/urdf/aura_arm.xacro
+<?xml version="1.0"?>
+<robot name="aura" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <link name="arm_stand">
+        <xacro:box_inertia m="0.500" l="0.10" w="0.10" h="0.08" 
+                                    xyz="0 0 -0.100" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.100" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_stand.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="mud_yellow"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.100" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_stand.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="arm_stand_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="top_plate"/>
+        <child link="arm_stand"/>
+    </joint>
+
+
+    <link name="arm_base">
+        <xacro:box_inertia m="0.200" l="0.05" w="0.05" h="0.03" 
+                                    xyz="0 0 -0.200" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.200" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.200" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_1" type="revolute">
+        <origin xyz="0.0 0.0 0.100" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_stand"/>
+        <child link="arm_base"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="30.0" velocity="10.0"/>
+    </joint>
+
+
+    <link name="arm_lower">
+        <xacro:cylinder_inertia m="0.500" r="0.02" h="0.15" 
+                            xyz="0 0 -0.24" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.24" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_lower.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.24" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_lower.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_2" type="revolute">
+        <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_base"/>
+        <child link="arm_lower"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="30.0" velocity="10.0"/>
+    </joint>
+
+
+    <link name="arm_upper">
+        <xacro:cylinder_inertia m="0.500" r="0.02" h="0.15" 
+                            xyz="0 0 -0.39" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.39" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_upper.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.39" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/arm_upper.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_3" type="revolute">
+        <origin xyz="0.0 0.0 0.14" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_lower"/>
+        <child link="arm_upper"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-2.5" upper="2.5" effort="30.0" velocity="10.0"/>
+    </joint>
+
+
+    <link name="claw_support">
+        <xacro:box_inertia m="0.150" l="0.04" w="0.04" h="0.03" 
+                                    xyz="0 0 -0.565" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.565" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/end_effector.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="matte_brown"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.565" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/end_effector.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_4" type="revolute">
+        <origin xyz="0.0 0.0 0.16" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_upper"/>
+        <child link="claw_support"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="30.0" velocity="10.0"/>
+    </joint>
+
+
+    <!-- Gripper -->
+    <link name="gripper_base">
+        <xacro:box_inertia m="0.500" l="${2*0.1}" w="${2*0.1}" h="${2*0.1}" 
+                            xyz="0 0 -0.60" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0 -0.60" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.60" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name ="joint_5" type="revolute">
+        <parent link="claw_support"/>
+        <child link = "gripper_base"/>
+        <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57"
+                effort="30.0" velocity="10.0"/>
+    </joint>
+
+    <link name="gripper_right">
+        <xacro:box_inertia m="0.100" l="${2*0.1}" w="${2*0.1}" h="${2*0.1}" 
+                            xyz="0 0.015 -0.66" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 0.015 -0.66" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_right.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0.015 -0.66" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_right.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name ="joint_6" type="revolute">
+        <parent link="gripper_base"/>
+        <child link = "gripper_right"/>
+        <origin xyz="0 -0.015 0.07" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-0.550" upper="0"
+                effort="30.0" velocity="10.0"/>
+    </joint>
+
+    <link name="gripper_left">
+        <xacro:box_inertia m="0.100" l="${2*0.1}" w="${2*0.1}" h="${2*0.1}" 
+                            xyz="0 -0.015 -0.66" rpy="0 0 0" />
+        <visual>
+            <origin xyz="0 -0.015 -0.66" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_left.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 -0.015 -0.66" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://aura_description/meshes/gripper_left.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name ="joint_7" type="revolute">
+        <parent link="gripper_base"/>
+        <child link = "gripper_left"/>
+        <origin xyz="0 0.015 0.07" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="0" upper="0.550"
+                effort="30.0" velocity="10.0"/>
+        <mimic joint="joint_6" multiplier="-1"/>
+    </joint>
+
+</robot>

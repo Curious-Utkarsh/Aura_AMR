@@ -4,6 +4,3 @@ source;share/aura_script/hook/pythonpath.sh
 source;share/aura_script/hook/ament_prefix_path.ps1
 source;share/aura_script/hook/ament_prefix_path.dsv
 source;share/aura_script/hook/ament_prefix_path.sh
-source;../../build/aura_script/share/aura_script/hook/pythonpath_develop.ps1
-source;../../build/aura_script/share/aura_script/hook/pythonpath_develop.dsv
-source;../../build/aura_script/share/aura_script/hook/pythonpath_develop.sh

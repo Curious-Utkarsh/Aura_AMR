@@ -73,7 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/aura_mapping_uninstall.dir/clean
-clean: CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/clean
+clean: CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/clean
 .PHONY : clean
 
@@ -130,36 +130,36 @@ CMakeFiles/aura_mapping_uninstall.dir/clean:
 .PHONY : CMakeFiles/aura_mapping_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir
+# Target rules for target CMakeFiles/ament_cmake_python_copy_aura_mapping.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_mapping/CMakeFiles --progress-num= "Built target ament_cmake_python_symlink_aura_mapping"
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/all
+CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_mapping/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_aura_mapping"
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/rule: cmake_check_build_system
+CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/utk/aura_ws/build/aura_mapping/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/utk/aura_ws/build/aura_mapping/CMakeFiles 0
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/rule
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/rule
 
 # Convenience name for target.
-ament_cmake_python_symlink_aura_mapping: CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/rule
-.PHONY : ament_cmake_python_symlink_aura_mapping
+ament_cmake_python_copy_aura_mapping: CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/rule
+.PHONY : ament_cmake_python_copy_aura_mapping
 
 # clean rule for target.
-CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/clean
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/clean
+CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/all: CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/all
+CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/all: CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_mapping_egg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_mapping/CMakeFiles --progress-num= "Built target ament_cmake_python_build_aura_mapping_egg"

@@ -55,11 +55,6 @@
         <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
-
-        <!-- <gazebo>
-            <plugin filename="libignition-gazebo-link-attacher-system.so" name="ignition::gazebo::systems::LinkAttacher"/>
-        </gazebo> -->
-
     </gazebo>
 
 

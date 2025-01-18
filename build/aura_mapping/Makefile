@@ -198,17 +198,17 @@ aura_mapping_uninstall/fast:
 .PHONY : aura_mapping_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_aura_mapping
+# Target rules for targets named ament_cmake_python_copy_aura_mapping
 
 # Build rule for target.
-ament_cmake_python_symlink_aura_mapping: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_aura_mapping
-.PHONY : ament_cmake_python_symlink_aura_mapping
+ament_cmake_python_copy_aura_mapping: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_aura_mapping
+.PHONY : ament_cmake_python_copy_aura_mapping
 
 # fast build rule for target.
-ament_cmake_python_symlink_aura_mapping/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_mapping.dir/build
-.PHONY : ament_cmake_python_symlink_aura_mapping/fast
+ament_cmake_python_copy_aura_mapping/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_mapping.dir/build
+.PHONY : ament_cmake_python_copy_aura_mapping/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_aura_mapping_egg
@@ -237,7 +237,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_aura_mapping_egg"
-	@echo "... ament_cmake_python_symlink_aura_mapping"
+	@echo "... ament_cmake_python_copy_aura_mapping"
 	@echo "... aura_mapping_uninstall"
 	@echo "... uninstall"
 .PHONY : help

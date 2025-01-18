@@ -73,7 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/aura_navigation_uninstall.dir/clean
-clean: CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/clean
+clean: CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/clean
 .PHONY : clean
 
@@ -130,36 +130,36 @@ CMakeFiles/aura_navigation_uninstall.dir/clean:
 .PHONY : CMakeFiles/aura_navigation_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir
+# Target rules for target CMakeFiles/ament_cmake_python_copy_aura_navigation.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_navigation/CMakeFiles --progress-num= "Built target ament_cmake_python_symlink_aura_navigation"
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/all
+CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_navigation/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_aura_navigation"
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/rule: cmake_check_build_system
+CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/utk/aura_ws/build/aura_navigation/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/utk/aura_ws/build/aura_navigation/CMakeFiles 0
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/rule
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/rule
 
 # Convenience name for target.
-ament_cmake_python_symlink_aura_navigation: CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/rule
-.PHONY : ament_cmake_python_symlink_aura_navigation
+ament_cmake_python_copy_aura_navigation: CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/rule
+.PHONY : ament_cmake_python_copy_aura_navigation
 
 # clean rule for target.
-CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/clean
-.PHONY : CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/clean
+CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/build.make CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/all: CMakeFiles/ament_cmake_python_symlink_aura_navigation.dir/all
+CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/all: CMakeFiles/ament_cmake_python_copy_aura_navigation.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/build.make CMakeFiles/ament_cmake_python_build_aura_navigation_egg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/utk/aura_ws/build/aura_navigation/CMakeFiles --progress-num= "Built target ament_cmake_python_build_aura_navigation_egg"

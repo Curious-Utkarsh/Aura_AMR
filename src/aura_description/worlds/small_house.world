@@ -19,6 +19,30 @@
             <pose frame=''>2.0 5.0 0.22 0 0 -1.57</pose>
         </model>
 
+    <model name='Aura_Payload'>
+            <static>false</static>
+            <include>
+                <uri>model://Aura_Payload</uri>
+            </include>
+            <pose frame=''>2.0 1.0 0.15 0 0 0</pose>
+        </model>
+
+    <model name='Aura_Payload_2'>
+            <static>false</static>
+            <include>
+                <uri>model://Aura_Payload_2</uri>
+            </include>
+            <pose frame=''>1.0 1.0 0.15 0 0 0</pose>
+        </model>
+
+    <model name='Aura_Payload_3'>
+            <static>false</static>
+            <include>
+                <uri>model://Aura_Payload_3</uri>
+            </include>
+            <pose frame=''>0.0 1.0 0.15 0 0 0</pose>
+        </model>
+
   <model name='AirconditionerA_01_001'>
         <static>true</static>
         <include>

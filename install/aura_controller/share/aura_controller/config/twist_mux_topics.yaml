@@ -1,1 +1,12 @@
-/home/utk/aura_ws/src/aura_controller/config/twist_mux_topics.yaml
+twist_mux:
+  ros__parameters:
+    use_stamped: false
+    topics:
+      joystick:
+        topic   : joy_vel
+        timeout : 0.5
+        priority: 99
+      navigation: 
+        topic   : cmd_vel
+        timeout : 0.5
+        priority: 90

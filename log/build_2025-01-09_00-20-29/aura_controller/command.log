@@ -1,1 +1,0 @@
-Invoking command in '/home/utk/aura_ws/build/aura_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/utk/bumperbot_ws/install/bumperbot_vision:/home/utk/bumperbot_ws/install/bumperbot_py_examples:/opt/ros/humble /usr/bin/cmake --build /home/utk/aura_ws/build/aura_controller -- -j16 -l16

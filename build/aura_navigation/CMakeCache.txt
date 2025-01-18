@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -238,9 +238,6 @@ Python3_EXECUTABLE:FILEPATH=/usr/bin/python3
 //Name of the computer/site where compile is being run
 SITE:STRING=utk-ubuntu
 
-//Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
-
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 
@@ -334,80 +331,8 @@ aura_navigation_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 aura_navigation_SOURCE_DIR:STATIC=/home/utk/aura_ws/src/aura_navigation
 
-//The directory containing a CMake configuration file for builtin_interfaces.
-builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
-
-//The directory containing a CMake configuration file for fastcdr.
-fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
-
-//The directory containing a CMake configuration file for fastrtps_cmake_module.
-fastrtps_cmake_module_DIR:PATH=/opt/ros/humble/share/fastrtps_cmake_module/cmake
-
-//The directory containing a CMake configuration file for geometry_msgs.
-geometry_msgs_DIR:PATH=/opt/ros/humble/share/geometry_msgs/cmake
-
-//The directory containing a CMake configuration file for nav2_simple_commander.
-nav2_simple_commander_DIR:PATH=nav2_simple_commander_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for rclpy.
 rclpy_DIR:PATH=/opt/ros/humble/share/rclpy/cmake
-
-//The directory containing a CMake configuration file for rcpputils.
-rcpputils_DIR:PATH=/opt/ros/humble/share/rcpputils/cmake
-
-//The directory containing a CMake configuration file for rcutils.
-rcutils_DIR:PATH=/opt/ros/humble/share/rcutils/cmake
-
-//The directory containing a CMake configuration file for rmw.
-rmw_DIR:PATH=/opt/ros/humble/share/rmw/cmake
-
-//The directory containing a CMake configuration file for rosidl_adapter.
-rosidl_adapter_DIR:PATH=/opt/ros/humble/share/rosidl_adapter/cmake
-
-//The directory containing a CMake configuration file for rosidl_cmake.
-rosidl_cmake_DIR:PATH=/opt/ros/humble/share/rosidl_cmake/cmake
-
-//The directory containing a CMake configuration file for rosidl_default_runtime.
-rosidl_default_runtime_DIR:PATH=/opt/ros/humble/share/rosidl_default_runtime/cmake
-
-//The directory containing a CMake configuration file for rosidl_generator_c.
-rosidl_generator_c_DIR:PATH=/opt/ros/humble/share/rosidl_generator_c/cmake
-
-//The directory containing a CMake configuration file for rosidl_generator_cpp.
-rosidl_generator_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_generator_cpp/cmake
-
-//The directory containing a CMake configuration file for rosidl_runtime_c.
-rosidl_runtime_c_DIR:PATH=/opt/ros/humble/share/rosidl_runtime_c/cmake
-
-//The directory containing a CMake configuration file for rosidl_runtime_cpp.
-rosidl_runtime_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_runtime_cpp/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_c.
-rosidl_typesupport_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_c/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_cpp.
-rosidl_typesupport_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_cpp/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_fastrtps_c.
-rosidl_typesupport_fastrtps_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_fastrtps_cpp.
-rosidl_typesupport_fastrtps_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_interface.
-rosidl_typesupport_interface_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_interface/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_introspection_c.
-rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_introspection_c/cmake
-
-//The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
-rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/cmake
-
-//The directory containing a CMake configuration file for std_msgs.
-std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
-
-//The directory containing a CMake configuration file for tf_transformations.
-tf_transformations_DIR:PATH=tf_transformations_DIR-NOTFOUND
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
@@ -569,6 +494,4 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
-//Index for unique symlink install targets
-__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=0
 

@@ -1,1 +1,8 @@
-/home/utk/aura_ws/build/aura_navigation/ament_cmake_python/aura_navigation/aura_navigation.egg-info/SOURCES.txt
+setup.py
+aura_navigation/__init__.py
+aura_navigation/pose_estimator.py
+aura_navigation/waypoint_following.py
+aura_navigation.egg-info/PKG-INFO
+aura_navigation.egg-info/SOURCES.txt
+aura_navigation.egg-info/dependency_links.txt
+aura_navigation.egg-info/top_level.txt
