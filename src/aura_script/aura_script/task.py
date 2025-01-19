@@ -11,7 +11,8 @@ import multiprocessing
 from std_msgs.msg import Bool
 import random
 import math
-
+from rclpy.action import ActionClient
+from aura_msgs.action import AuraTask
 
 class TaskNode(Node):
     def __init__(self):
@@ -23,6 +24,7 @@ class TaskNode(Node):
         self.yaw = 0.0
         self.orient = False
         self.goal_done = False
+        self.arm_goal_done = 0
         self.in_dock = True
         self.phase_1 = False
         self.flag = True
@@ -39,11 +41,54 @@ class TaskNode(Node):
         self.decision_made = False
         self.start_bot = False
         self.change_dir = -1
+        self.color_left = 0.0
+        self.width = 0
+        self.color_right = 0.0
+        self.task = 0
+        self.goal_success = False
         self.vel_pub = self.create_publisher(Twist, "/cmd_vel", 10)
         self.cam_sub = self.create_subscription(Image, "/camera/image_raw", self.camera_callback, 10)
         self.imu_sub = self.create_subscription(Imu, "/imu/out", self.imu_callback, 10)
         self.lidar_sub = self.create_subscription(LaserScan, "/scan", self.lidar_callback, 10)
         self.battety_sub = self.create_subscription(Bool, "/battery_status", self.battery_callback, 10)
+        self._action_client = ActionClient(self, AuraTask, '/task_server')
+
+    def send_goal(self, task_number):
+        if not self._action_client.server_is_ready():
+            self.get_logger().warn('Action server not ready yet. Waiting...')
+            return
+
+        # Create a goal message
+        goal_msg = AuraTask.Goal()
+        goal_msg.task_number = task_number  # Replace with the desired task number
+
+        self.get_logger().info(f'Sending goal with task_number: {goal_msg.task_number}')
+
+        # Send the goal
+        future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
+        future.add_done_callback(self.goal_response_callback)
+
+    def feedback_callback(self, feedback):
+        self.get_logger().info(f'Received feedback: {feedback.feedback}')
+
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Goal was rejected by the server.')
+            return
+
+        self.get_logger().info('Goal accepted by the server.')
+
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(self.result_callback)
+
+    def result_callback(self, future):
+        result = future.result().result
+        if result.success:
+            self.get_logger().info(f'Goal succeeded with result: {result}')
+            self.goal_success = True
+        else:
+            self.get_logger().error(f'Goal failed with result: {result}')
 
     def battery_callback(self, battery_status):
         self.battery_low = battery_status.data
@@ -74,6 +119,72 @@ class TaskNode(Node):
         # print("Front Ray :", self.front_ray)
         # print("Left Ray :", self.left_ray)
         # print("- - - - - -")
+
+    def detect_red_objects(self, frame):
+        # Convert the frame to HSV color space
+        hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        # Define HSV range for the color red
+        lower_red1 = np.array([0, 120, 70])  # Lower range for red
+        upper_red1 = np.array([10, 255, 255])
+
+        lower_red2 = np.array([170, 120, 70])  # Upper range for red
+        upper_red2 = np.array([180, 255, 255])
+
+        # Create masks for red
+        mask1 = cv2.inRange(hsv_frame, lower_red1, upper_red1)
+        mask2 = cv2.inRange(hsv_frame, lower_red2, upper_red2)
+
+        # Combine both masks
+        red_mask = cv2.bitwise_or(mask1, mask2)
+
+        # Apply some morphological operations to remove noise
+        kernel = np.ones((5, 5), np.uint8)
+        red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_CLOSE, kernel)
+        red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_OPEN, kernel)
+
+        # Find contours in the mask
+        contours, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        # Draw bounding boxes around detected red objects
+        for contour in contours:
+            if cv2.contourArea(contour) > 300:  # Filter by area
+                x, y, w, h = cv2.boundingRect(contour)
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Draw bounding box
+                cv2.putText(frame, "Red Object", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                self.color_left = x
+                self.color_right = x+w
+                self.width = w
+                cv2.circle(frame, (self.color_left, y), radius=7, color=(255, 0, 0), thickness=2)
+                cv2.circle(frame, (self.color_right, y), radius=7, color=(255, 0, 0), thickness=2)
+                cv2.circle(frame, (int((self.color_left + self.color_right) / 2.0), y), radius=7, color=(0, 255, 0), thickness=2)
+                cv2.circle(frame, (320, y), radius=7, color=(255, 255, 255), thickness=2)
+                
+
+        return frame
+
+    def follow_color(self):
+        center_color = (self.color_left + self.color_right)/2.0
+        error = 320 - int(center_color)
+        print("error :",error*0.002)
+        print("width:", self.width)
+        if self.width >= 25 and self.width < 40:
+            if self.task == 0:
+                self.send_goal(0)
+                self.task = 1
+            elif self.task == 2:
+                self.send_goal(2)
+                self.task = 3
+                
+        if self.width >= 79:
+            self.velocity_publisher(0.0, 0.0)
+            self.arm_goal_done = 2
+            if self.goal_success == True and self.task == 1:
+                self.send_goal(1)
+                self.task = 2
+        else:
+            self.velocity_publisher(0.2, error*0.002)
+
         
     def camera_callback(self, img):
         self.frame = self.img_bridge.imgmsg_to_cv2(img, 'bgr8')
@@ -92,6 +203,8 @@ class TaskNode(Node):
                     error = 320 - center_x #Error in Alignment
 
                     self.markerDetect = True
+
+            self.frame = self.detect_red_objects(self.frame)
 
         cv2.imshow('Frame', self.frame)
         cv2.waitKey(1)
@@ -114,12 +227,13 @@ class TaskNode(Node):
                 if self.goal_done == False:
                     # print("Going on Journey!!")
                     if self.battery_low == True:
-                        self.set_goal() # Go to Goal Pose
+                        self.set_goal(2.0, 1.5, 0.0) #Docking Start Posn.
                     else:
                         #self.random_obstacle_avoidance()
-                        self.coverage_algorithm()
+                        self.follow_color()
+                        #self.set_goal(0.0, 3.5, -1.57) #Blue Bar
 
-        if self.goal_done == True: #Go Back to Dock
+        if self.goal_done == True and self.arm_goal_done == 1: #Go Back to Dock
             thres_front = 0.8
             thres_side = 1.5
             #Going Back of Dock
@@ -149,17 +263,17 @@ class TaskNode(Node):
                 vel_z = float(error/100.0)
                 # print(vel_z)
                 print("Aligning To Dock!!")
- 
+
             self.velocity_publisher(vel_x, vel_z)
 
-    def set_goal(self):
+
+    def set_goal(self, x,y,z):
         self.nav.waitUntilNav2Active()
 
-        goal_pose1 = self.create_pose_stamped(0.0, 0.0, 0.0) #Map posn goes there (dock at 2,5)
-        goal_pose2 = self.create_pose_stamped(2.0, 1.5, 1.57) #Align with dock but 3 cells back from it
+        goal_pose = self.create_pose_stamped(x,y,z) #Align with dock but 3 cells back from it
 
-        waypoints = [goal_pose2]
-        self.nav.followWaypoints(waypoints)
+        waypoint = [goal_pose]
+        self.nav.followWaypoints(waypoint)
 
         while not self.nav.isTaskComplete(): 
             feedback = self.nav.getFeedback()
@@ -167,7 +281,8 @@ class TaskNode(Node):
 
         print(self.nav.getResult())
         self.goal_done = True
-        print("Journey Done!!")
+        print("Reached Goal!!")
+
 
     def random_obstacle_avoidance(self):
         if self.front_ray < self.obstacle_avoid_threshold or self.left_ray < self.obstacle_avoid_threshold or self.right_ray < self.obstacle_avoid_threshold:
@@ -222,43 +337,7 @@ class TaskNode(Node):
 
         self.velocity_publisher(vel_x, vel_z)
 
-    def coverage_algorithm(self):
-        # NOT WORKING, THIS ALGO IS NOT TAKING OPPOSITE TURN!, FIX IT LATER WHEN REQUIRED.
-        if (
-            self.front_ray < self.obstacle_avoid_threshold or 
-            self.left_ray < self.obstacle_avoid_threshold or 
-            self.right_ray < self.obstacle_avoid_threshold
-        ):
-            if not self.turn_taking:
-                print("OBSTACLE DETECTED")
-                self.imu_current_yaw = self.yaw  # Store the current yaw
-                self.turn_taking = True         # Mark turn-taking as in progress
-                self.turn_taken = False         # Reset turn taken status
-
-            if not self.turn_taken:
-                # Calculate the yaw difference
-                yaw_diff = abs(self.yaw - self.imu_current_yaw)
-                print(yaw_diff)
-
-                if yaw_diff < math.pi:  # Turn until 180-degree rotation
-                    print("TAKING --- TURN")
-                    vel_x = 0.0
-                    vel_z = self.change_dir * 0.8  # Rotate in the change direction
-                else:
-                    print("TURN TAKEN")
-                    self.change_dir *= -1         # Reverse direction for the next obstacle
-                    self.turn_taken = True        # Mark turn as completed
-                    self.turn_taking = False      # Reset turn-taking flag
-        else:
-            print("MOVING FORWARD")
-            vel_x = 0.4
-            vel_z = 0.0
-
-        # Publish the velocity command
-        self.velocity_publisher(vel_x, vel_z)
-
         
-
     def detect_aruco_pose(self, img):
         marker_size = 0.60  #0.30
         axis_size = 0.3 #0.15
@@ -288,6 +367,7 @@ class TaskNode(Node):
                 id_list.append(f'obj_{ids[i]}')
 
         return center_aruco_list, id_list
+
     
     def create_pose_stamped(self, position_x, position_y, rotation_z):
         q_x, q_y, q_z, q_w = quaternion_from_euler(0.0, 0.0, rotation_z)

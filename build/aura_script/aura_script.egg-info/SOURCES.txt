@@ -10,7 +10,11 @@ setup.py
 ../../build/aura_script/aura_script.egg-info/zip-safe
 aura_script/__init__.py
 aura_script/task.py
+aura_script.egg-info/PKG-INFO
+aura_script.egg-info/SOURCES.txt
+aura_script.egg-info/dependency_links.txt
+aura_script.egg-info/entry_points.txt
+aura_script.egg-info/requires.txt
+aura_script.egg-info/top_level.txt
+aura_script.egg-info/zip-safe
 resource/aura_script
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

@@ -117,7 +117,8 @@ class TaskNode(Node):
                         self.set_goal() # Go to Goal Pose
                     else:
                         #self.random_obstacle_avoidance()
-                        self.coverage_algorithm()
+                        #self.coverage_algorithm()
+                        self.arm_goals()
 
         if self.goal_done == True: #Go Back to Dock
             thres_front = 0.8
@@ -257,8 +258,24 @@ class TaskNode(Node):
         # Publish the velocity command
         self.velocity_publisher(vel_x, vel_z)
 
-        
+    def arm_goals(self):
+        self.nav.waitUntilNav2Active()
 
+        goal_pose_red = self.create_pose_stamped(2.0, 1.5, 0.0) #Red Bar
+        #goal_pose2 = self.create_pose_stamped(2.0, 1.5, 1.57) #Align with dock but 3 cells back from it
+
+        waypoints = [goal_pose_red]
+        self.nav.followWaypoints(waypoints)
+
+        while not self.nav.isTaskComplete(): 
+            feedback = self.nav.getFeedback()
+            print(feedback)
+
+        print(self.nav.getResult())
+        self.goal_done = True
+        print("Arrived at Red Bar")
+
+        
     def detect_aruco_pose(self, img):
         marker_size = 0.60  #0.30
         axis_size = 0.3 #0.15

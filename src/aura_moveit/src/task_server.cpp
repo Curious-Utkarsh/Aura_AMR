@@ -73,17 +73,17 @@ private:
 
     if (goal_handle->get_goal()->task_number == 0)
     {
-      arm_joint_goal = {0.0, 1.57, 0.555, -0.500, 0.0};
-      gripper_joint_goal = {-0.470, 0.470};
+      arm_joint_goal = {0.0, 1.0, 1.257, -0.653, 0.0};
+      gripper_joint_goal = {-0.550, 0.550};
     }
     else if (goal_handle->get_goal()->task_number == 1)
     {
-      arm_joint_goal = {0.0, 0.820, 0.310, 0.365, -0.435};
-      gripper_joint_goal = {-0.0, 0.0};
+      arm_joint_goal = {0.0, -0.0, -1.0, 0.0, 0.0};
+      gripper_joint_goal = {-0.550, 0.550};
     }
     else if (goal_handle->get_goal()->task_number == 2)
     {
-      arm_joint_goal = {0.0, 0.0, 0.0, 0.0, 0.0};
+      arm_joint_goal = {0.0, -0.110, 1.284, 0.382, 0.059};
       gripper_joint_goal = {-0.0, 0.0};
     }
     else
