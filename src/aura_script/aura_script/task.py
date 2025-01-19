@@ -350,7 +350,6 @@ class TaskNode(Node):
         self.goal_done = True
         print("Reached Goal!!")
 
-
     def random_obstacle_avoidance(self):
         if self.front_ray < self.obstacle_avoid_threshold or self.left_ray < self.obstacle_avoid_threshold or self.right_ray < self.obstacle_avoid_threshold:
             print("OBSTACLE DETECTED")

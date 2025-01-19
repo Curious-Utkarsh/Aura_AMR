@@ -490,14 +490,14 @@
         
         <pose frame=''>2.046082 -1.892926 0.0703880 -0.018328 -0.000441 1.576216</pose>
 	</model>
-	<model name='DeskPortraitC_01'>
+	<!-- <model name='DeskPortraitC_01'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_DeskPortraitC_01</uri>
         </include>
         <pose frame=''>-7.746377 2.731075 0.694620 0.000488 -0.000359 -0.055499</pose>
-	</model>
-        <model name='DeskPortraitC_02'>
+	</model> -->
+    <model name='DeskPortraitC_02'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_DeskPortraitC_02</uri>

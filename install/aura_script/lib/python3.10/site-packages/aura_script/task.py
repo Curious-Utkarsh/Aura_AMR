@@ -10,7 +10,6 @@ from nav2_simple_commander.robot_navigator import BasicNavigator
 import multiprocessing 
 from std_msgs.msg import Bool
 import random
-import math
 from rclpy.action import ActionClient
 from aura_msgs.action import AuraTask
 
@@ -203,11 +202,11 @@ class TaskNode(Node):
                 self.velocity_publisher(0.2, error*0.002)
 
         if color == "BLUE":
-            print("Entered BLUE")
+            #print("Entered BLUE")
             center_color = (self.color_left + self.color_right)/2.0
             error = 320 - int(center_color)
-            print("error :",error*0.002)
-            print("width:", self.width)
+            print("error :",error*0.001)
+            #print("width:", self.width)
             if self.width >= 45 and self.width < 75:
                 if self.task == 4:
                     self.send_goal(3)
@@ -230,7 +229,7 @@ class TaskNode(Node):
                 if self.goal_success == True and self.task == 7:
                     self.task = 8
             else:
-                self.velocity_publisher(0.15, error*0.001)
+                self.velocity_publisher(0.2, error*0.001)
 
         
     def camera_callback(self, img):
@@ -262,7 +261,14 @@ class TaskNode(Node):
                 self.goal_done = True
                 self.battery_low = True
                 self.task = 9
-            print(self.task)
+
+                #ADDED TO PREVENT COMING OUT OF DOCK
+                self.in_dock = False
+                self.battery_low = False
+                self.orient = True
+                self.goal_done = False
+
+            #print(self.task)
 
         cv2.imshow('Frame', self.frame)
         cv2.waitKey(1)
@@ -343,7 +349,6 @@ class TaskNode(Node):
         print(self.nav.getResult())
         self.goal_done = True
         print("Reached Goal!!")
-
 
     def random_obstacle_avoidance(self):
         if self.front_ray < self.obstacle_avoid_threshold or self.left_ray < self.obstacle_avoid_threshold or self.right_ray < self.obstacle_avoid_threshold:
