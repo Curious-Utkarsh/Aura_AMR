@@ -63,6 +63,6 @@ def generate_launch_description():
         [
             is_sim_arg,
             move_group_node, 
-            rviz_node
+            #rviz_node
         ]
     )

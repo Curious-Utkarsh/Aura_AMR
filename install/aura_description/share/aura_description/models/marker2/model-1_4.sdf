@@ -1,15 +1,1 @@
-<?xml version="1.0" ?>
-<sdf version="1.4">
-  <model name="Marker2">
-    <static>true</static>
-    <link name="link">
-      <visual name="visual">
-        <geometry>
-          <mesh>
-            <uri>model://marker2/meshes/Marker2.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-  </model>
-</sdf>
+/home/utk/aura_ws/src/aura_description/models/marker2/model-1_4.sdf

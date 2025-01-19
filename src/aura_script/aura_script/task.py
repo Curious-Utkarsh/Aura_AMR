@@ -10,7 +10,6 @@ from nav2_simple_commander.robot_navigator import BasicNavigator
 import multiprocessing 
 from std_msgs.msg import Bool
 import random
-import math
 from rclpy.action import ActionClient
 from aura_msgs.action import AuraTask
 
@@ -45,6 +44,7 @@ class TaskNode(Node):
         self.width = 0
         self.color_right = 0.0
         self.task = 0
+        self.complete = False
         self.goal_success = False
         self.vel_pub = self.create_publisher(Twist, "/cmd_vel", 10)
         self.cam_sub = self.create_subscription(Image, "/camera/image_raw", self.camera_callback, 10)
@@ -120,7 +120,7 @@ class TaskNode(Node):
         # print("Left Ray :", self.left_ray)
         # print("- - - - - -")
 
-    def detect_red_objects(self, frame):
+    def detect_objects(self, frame, color):
         # Convert the frame to HSV color space
         hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
@@ -130,6 +130,13 @@ class TaskNode(Node):
 
         lower_red2 = np.array([170, 120, 70])  # Upper range for red
         upper_red2 = np.array([180, 255, 255])
+
+        # Define HSV range for the color blue
+        lower_blue = np.array([100, 150, 70])  # Lower range for blue
+        upper_blue = np.array([140, 255, 255])  # Upper range for blue
+
+        # Create mask for blue
+        blue_mask = cv2.inRange(hsv_frame, lower_blue, upper_blue)
 
         # Create masks for red
         mask1 = cv2.inRange(hsv_frame, lower_red1, upper_red1)
@@ -144,14 +151,17 @@ class TaskNode(Node):
         red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_OPEN, kernel)
 
         # Find contours in the mask
-        contours, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        if color == "RED":
+            contours, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        else:
+            contours, _ = cv2.findContours(blue_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         # Draw bounding boxes around detected red objects
         for contour in contours:
             if cv2.contourArea(contour) > 300:  # Filter by area
                 x, y, w, h = cv2.boundingRect(contour)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Draw bounding box
-                cv2.putText(frame, "Red Object", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                cv2.putText(frame, str(color+" Object"), (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
                 self.color_left = x
                 self.color_right = x+w
                 self.width = w
@@ -160,30 +170,66 @@ class TaskNode(Node):
                 cv2.circle(frame, (int((self.color_left + self.color_right) / 2.0), y), radius=7, color=(0, 255, 0), thickness=2)
                 cv2.circle(frame, (320, y), radius=7, color=(255, 255, 255), thickness=2)
                 
-
         return frame
 
-    def follow_color(self):
-        center_color = (self.color_left + self.color_right)/2.0
-        error = 320 - int(center_color)
-        print("error :",error*0.002)
-        print("width:", self.width)
-        if self.width >= 25 and self.width < 40:
-            if self.task == 0:
-                self.send_goal(0)
-                self.task = 1
-            elif self.task == 2:
-                self.send_goal(2)
-                self.task = 3
-                
-        if self.width >= 79:
-            self.velocity_publisher(0.0, 0.0)
-            self.arm_goal_done = 2
-            if self.goal_success == True and self.task == 1:
-                self.send_goal(1)
-                self.task = 2
-        else:
-            self.velocity_publisher(0.2, error*0.002)
+    def follow_color(self, color):
+        if color == "RED":
+            center_color = (self.color_left + self.color_right)/2.0
+            error = 320 - int(center_color)
+            print("error :",error*0.002)
+            print("width:", self.width)
+            if self.width >= 25 and self.width < 40:
+                if self.task == 0:
+                    self.send_goal(0)
+                    self.task = 1
+                elif self.task == 2:
+                    self.goal_success = False
+                    self.send_goal(2)
+                    self.task = 3
+                    
+            if self.width >= 79:
+                self.velocity_publisher(0.0, 0.0)
+                self.arm_goal_done = 2
+                if self.goal_success == True and self.task == 1:
+                    self.send_goal(1)
+                    self.task = 2
+                if self.goal_success == True and self.task == 3:
+                    self.set_goal(2.0, 0.0, 2.5) #EATLIER WAS !.57
+                    self.goal_done = False
+                    self.task = 4
+                    self.goal_success = False
+            else:
+                self.velocity_publisher(0.2, error*0.002)
+
+        if color == "BLUE":
+            #print("Entered BLUE")
+            center_color = (self.color_left + self.color_right)/2.0
+            error = 320 - int(center_color)
+            print("error :",error*0.001)
+            #print("width:", self.width)
+            if self.width >= 45 and self.width < 75:
+                if self.task == 4:
+                    self.send_goal(3)
+                    self.task = 5
+                elif self.task == 6:
+                    self.goal_success = False
+                    #PUT SET GOAL HERE FOR NEXT DUSTBIN
+                    self.set_goal(-8.7, 0.0, 1.0)
+                    self.goal_done = False
+                    self.send_goal(5)
+                    self.task = 2 #DONE PURPOSELY
+                    self.complete = True
+                    
+            if self.width >= 80:
+                self.velocity_publisher(0.0, 0.0)
+                self.arm_goal_done = 2
+                if self.goal_success == True and self.task == 5:
+                    self.send_goal(4)
+                    self.task = 6
+                if self.goal_success == True and self.task == 7:
+                    self.task = 8
+            else:
+                self.velocity_publisher(0.2, error*0.001)
 
         
     def camera_callback(self, img):
@@ -203,8 +249,26 @@ class TaskNode(Node):
                     error = 320 - center_x #Error in Alignment
 
                     self.markerDetect = True
+            if self.task < 4:
+                self.frame = self.detect_objects(self.frame, "RED")
+            if self.task >= 4:
+                if self.task == 4 and self.complete == True:
+                    self.task = 8
+                self.frame = self.detect_objects(self.frame, "BLUE")
+            if self.task == 8:
+                self.send_goal(6)
+                self.arm_goal_done = 1 #GO BACK TO DOCK
+                self.goal_done = True
+                self.battery_low = True
+                self.task = 9
 
-            self.frame = self.detect_red_objects(self.frame)
+                #ADDED TO PREVENT COMING OUT OF DOCK
+                self.in_dock = False
+                self.battery_low = False
+                self.orient = True
+                self.goal_done = False
+
+            #print(self.task)
 
         cv2.imshow('Frame', self.frame)
         cv2.waitKey(1)
@@ -230,8 +294,11 @@ class TaskNode(Node):
                         self.set_goal(2.0, 1.5, 0.0) #Docking Start Posn.
                     else:
                         #self.random_obstacle_avoidance()
-                        self.follow_color()
-                        #self.set_goal(0.0, 3.5, -1.57) #Blue Bar
+                        if self.task < 4:
+                            self.follow_color("RED")
+                        if self.task >= 4:
+                            self.follow_color("BLUE") 
+            
 
         if self.goal_done == True and self.arm_goal_done == 1: #Go Back to Dock
             thres_front = 0.8

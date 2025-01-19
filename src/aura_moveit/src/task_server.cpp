@@ -86,6 +86,26 @@ private:
       arm_joint_goal = {0.0, -0.110, 1.284, 0.382, 0.059};
       gripper_joint_goal = {-0.0, 0.0};
     }
+    else if (goal_handle->get_goal()->task_number == 3)
+    {
+      arm_joint_goal = {0.0, 1.0, 1.257, -0.653, -0.120};
+      gripper_joint_goal = {-0.550, 0.550};
+    }
+    else if (goal_handle->get_goal()->task_number == 4)
+    {
+      arm_joint_goal = {3.14, 0.6, 1.0, 0.5, 1.57}; 
+      gripper_joint_goal = {-0.550, 0.550};
+    }
+    else if (goal_handle->get_goal()->task_number == 5)
+    {
+      arm_joint_goal = {0.0, -0.110, 1.284, -0.382, 0.059};
+      gripper_joint_goal = {-0.550, 0.550};
+    }
+    else if (goal_handle->get_goal()->task_number == 6)
+    {
+      arm_joint_goal = {0.0, 0.0, 0.0, 0.0, 0.0};
+      gripper_joint_goal = {-0.0, 0.0};
+    }
     else
     {
       RCLCPP_ERROR(get_logger(), "Invalid Task Number");

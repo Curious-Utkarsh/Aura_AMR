@@ -27,20 +27,20 @@
             <pose frame=''>2.0 1.0 0.15 0 0 0</pose>
         </model>
 
-    <model name='Aura_Payload_2'>
+    <!-- <model name='Aura_Payload_2'>
             <static>false</static>
             <include>
                 <uri>model://Aura_Payload_2</uri>
             </include>
             <pose frame=''>1.0 1.0 0.15 0 0 0</pose>
-        </model>
+        </model> -->
 
     <model name='Aura_Payload_3'>
             <static>false</static>
             <include>
                 <uri>model://Aura_Payload_3</uri>
             </include>
-            <pose frame=''>0.0 1.0 0.15 0 0 0</pose>
+            <pose frame=''>-0.15 1.0 0.15 0 0 0</pose>
         </model>
 
   <model name='AirconditionerA_01_001'>
@@ -436,13 +436,13 @@
         <pose frame=''>7.937017 3.080310 0.300000 0 -0 3.14</pose>
 	</model>
 
-	<model name='PortraitC_01'>
+	<!-- <model name='PortraitC_01'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_PortraitC_01</uri>
         </include>
         <pose frame=''>-9.294904 -4.526084 1.000000 0 -0 1.554734</pose>
-	</model>
+	</model> -->
 	
 	<model name='PortraitD_01'>
         <static>true</static>    

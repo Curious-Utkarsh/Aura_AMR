@@ -78,6 +78,22 @@ def generate_launch_description():
             "use_sim_time": "True"
         }.items()
     )
+
+    moveit = IncludeLaunchDescription(
+        os.path.join(
+            get_package_share_directory("aura_moveit"),
+            "launch",
+            "moveit.launch.py"
+        ),
+    )
+
+    moveit_task_server = IncludeLaunchDescription(
+        os.path.join(
+            get_package_share_directory("aura_moveit"),
+            "launch",
+            "task_server.launch.py"
+        ),
+    )
     
     return LaunchDescription([
         gazebo,
@@ -87,4 +103,6 @@ def generate_launch_description():
         navigation,
         pose_estimator,
         joystick,
+        moveit,
+        moveit_task_server,
     ])
