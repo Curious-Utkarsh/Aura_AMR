@@ -187,7 +187,7 @@ class TaskNode(Node):
                     self.send_goal(2)
                     self.task = 3
                     
-            if self.width >= 79:
+            if self.width >= 80:
                 self.velocity_publisher(0.0, 0.0)
                 self.arm_goal_done = 2
                 if self.goal_success == True and self.task == 1:
@@ -263,10 +263,10 @@ class TaskNode(Node):
                 self.task = 9
 
                 #ADDED TO PREVENT COMING OUT OF DOCK
-                self.in_dock = False
-                self.battery_low = False
-                self.orient = True
-                self.goal_done = False
+                # self.in_dock = False
+                # self.battery_low = False
+                # self.orient = True
+                # self.goal_done = False
 
             #print(self.task)
 
